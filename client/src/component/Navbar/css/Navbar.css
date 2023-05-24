@@ -1,0 +1,54 @@
+.navclass {
+  border-bottom: 1px solid #000;
+  background-color: transparent !important;
+  margin-top: 2%;
+  text-decoration: none !important;
+}
+
+.baricon {
+  display: none;
+}
+
+.navformobile {
+  display: none !important;
+  margin-bottom: -350px;
+  background-color: aliceblue;
+
+  width: 100% !important;
+  z-index: 99;
+}
+
+.rs-nav-vertical > .rs-dropdown > .rs-dropdown-toggle {
+  text-align: center !important;
+  width: 100%;
+  z-index: 0;
+}
+.navformobile a {
+  color: #000 !important;
+}
+
+.hide-link-decorations {
+  text-decoration: none;
+  color: #000;
+}
+
+.hide-link-decorations:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+@media screen and (max-width: 480px) {
+  .baricon {
+    display: block;
+  }
+  .navbarcolleps {
+    display: none;
+  }
+  .active {
+    display: block !important;
+  }
+
+  .navmenubar Nav.Item {
+    margin-left: 20%;
+  }
+}

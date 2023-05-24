@@ -1,0 +1,124 @@
+.footer_sec {
+  margin-right: 1px !important;
+}
+.joinayurveda {
+  background-color: #ffff;
+  margin-top: 4%;
+  margin-bottom: -3% !important;
+  padding: 1% 3%;
+  border: 1px solid #000;
+  z-index: 99;
+  position: relative;
+}
+
+.getemail {
+  border-right: 1px solid #000;
+  padding: 1%;
+  text-align: left;
+  margin-right: 20px;
+}
+
+.footerow {
+  margin-top: 7%;
+  color: #fff;
+  line-height: 1px;
+  z-index: -1;
+  margin-bottom: 3%;
+}
+
+.footerow p {
+  margin-top: -4px;
+  font-size: small !important;
+}
+
+.footerheadpara {
+  font-size: larger !important;
+
+  margin-bottom: 15px;
+}
+
+.foot_btm {
+  width: 100%;
+  background: #046a38;
+  padding: 20px 0;
+  text-align: left !important;
+}
+.foot_btm p {
+  font: 500 15.52px/28px "Poppins", sans-serif;
+  color: #fff;
+}
+
+.footerow2 {
+  margin-left: 3% !important;
+  padding: 2% 0;
+  width: 94%;
+  color: #fff;
+  border-top: 1px solid #fff;
+}
+
+.btnsubscribe {
+  padding: 7.5px 5px;
+}
+
+.footerinputfield {
+  margin: 5% 10%;
+  display: none;
+}
+
+.footerinputfield input {
+  background-color: transparent !important;
+  border: 1px solid #fff;
+}
+.footerinputfield button {
+  background-color: transparent !important;
+  border: 1px solid #fff;
+  padding: 2.5px 5px;
+  text-align: center;
+}
+
+.footerlogo {
+  text-align: center !important;
+}
+
+@media screen and (max-width: 480px) {
+  .joinayurvedafamily {
+    display: none;
+  }
+  .footerow {
+    padding: 0 20px;
+  }
+  .joinayurveda {
+    margin-bottom: -9% !important;
+  }
+  .footersociallogo {
+    text-align: center !important;
+    margin-top: 7%;
+  }
+  .footerow {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .footerlogo {
+    text-align: center !important;
+    margin-top: 5%;
+  }
+  .footercompanyname {
+    text-align: center;
+    margin: 6% !important;
+    font-size: 12px !important;
+  }
+  .footerlogo img {
+    width: 30% !important;
+  }
+  .footerinputfield {
+    display: block;
+  }
+
+  .footerheadpara {
+    margin-top: 10% !important;
+  }
+}
+
+.footersociallogo {
+  text-align: right;
+}

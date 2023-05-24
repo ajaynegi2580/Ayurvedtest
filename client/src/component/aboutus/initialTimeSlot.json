@@ -1,0 +1,138 @@
+[
+  {
+    "id": 0,
+    "startTime": "09:00AM",
+
+    "booked": false,
+    "contactName": null,
+    "contactPhone": null
+  },
+  {
+    "id": 1,
+    "startTime": "09:30AM",
+
+    "booked": true,
+    "contactName": "Will",
+    "contactPhone": "4"
+  },
+  {
+    "id": 2,
+    "startTime": "10:00AM",
+
+    "booked": false,
+    "contactName": null,
+    "contactPhone": null
+  },
+  {
+    "id": 3,
+    "startTime": "10:30PM",
+
+    "booked": false,
+    "contactName": null,
+    "contactPhone": null
+  },
+  {
+    "id": 4,
+    "startTime": "11:00PM",
+
+    "booked": false,
+    "contactName": null,
+    "contactPhone": null
+  },
+  {
+    "id": 5,
+    "startTime": "11:30PM",
+
+    "booked": false,
+    "contactName": null,
+    "contactPhone": null
+  },
+  {
+    "id": 6,
+    "startTime": "12:00PM",
+
+    "booked": false,
+    "contactName": null,
+    "contactPhone": null
+  },
+  {
+    "id": 7,
+    "startTime": "12:30PM",
+
+    "booked": false,
+    "contactName": null,
+    "contactPhone": null
+  },
+  {
+    "id": 8,
+    "startTime": "02:00PM",
+
+    "booked": false,
+    "contactName": null,
+    "contactPhone": null
+  },
+  {
+    "id": 9,
+    "startTime": "02:30PM",
+
+    "booked": false,
+    "contactName": null,
+    "contactPhone": null
+  },
+  {
+    "id": 10,
+    "startTime": "03:00PM",
+
+    "booked": false,
+    "contactName": null,
+    "contactPhone": null
+  },
+  {
+    "id": 11,
+    "startTime": "03:30PM",
+
+    "booked": false,
+    "contactName": null,
+    "contactPhone": null
+  },
+  {
+    "id": 12,
+    "startTime": "04:00PM",
+
+    "booked": false,
+    "contactName": null,
+    "contactPhone": null
+  },
+  {
+    "id": 13,
+    "startTime": "04:00PM",
+
+    "booked": false,
+    "contactName": null,
+    "contactPhone": null
+  },
+  {
+    "id": 14,
+    "startTime": "04:30PM",
+
+    "booked": false,
+    "contactName": null,
+    "contactPhone": null
+  },
+  {
+    "id": 15,
+    "startTime": "05:00PM",
+
+    "booked": false,
+    "contactName": null,
+    "contactPhone": null
+  },
+  {
+    "id": 16,
+    "startTime": "05:30PM",
+
+    "booked": false,
+    "contactName": null,
+    "contactPhone": null
+  }
+]

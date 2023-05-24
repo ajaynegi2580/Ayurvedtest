@@ -1,0 +1,611 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(../fonts/baron_neue/Baron_Neue.otf);
+}
+
+.homeaboutus {
+  font-family: myFirstFont;
+}
+
+.App {
+  background-image: url("../images/Background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.containerclass {
+  margin: 0px 8% 0px 8%;
+}
+
+.containerclasst {
+  margin: 0 0.3%;
+}
+
+Nav:hover {
+  background-color: none !important;
+}
+
+item:hover {
+  background-color: #e5e5ea;
+  background-color: none;
+  color: none !important;
+  color: var(--rs-navbar-default-hover-text);
+}
+
+.nature {
+  text-align: left;
+}
+
+.nature Button {
+  margin-top: 20px;
+  color: #000;
+  border-color: #000;
+}
+
+.nature p {
+  margin-top: 20px;
+}
+
+.suitablecomb {
+  margin-top: 20px;
+}
+
+.naturalslution {
+  color: darkred;
+}
+
+.show-grid {
+  margin-top: 5%;
+}
+
+.homeaboutus {
+  margin-top: 10%;
+  margin-bottom: 1%;
+  color: #354e57;
+}
+
+.bodytypetrm {
+  border-radius: 50% !important;
+}
+
+.paths {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.bodytreatmentimg {
+  width: 70%;
+  margin-bottom: 5%;
+}
+
+.kidenydiseasesimg {
+  width: 70%;
+  margin-bottom: 7%;
+}
+
+.path-23665 {
+  width: 200px;
+  height: 200px;
+
+  padding: 64px 16px 63px;
+  border: solid 1px #707070;
+  background-color: #458164;
+}
+
+.rectangle-1410 {
+  font-family: Montserrat;
+  font-size: 60px;
+  font-weight: bold;
+
+  text-align: center !important;
+  color: #fff;
+}
+
+.mdt {
+  padding: 45px 17px 14px 14px;
+  border-radius: 14px;
+  background-color: #cae5af;
+}
+
+.diagnostic_test {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 5px;
+  text-align: center;
+  color: #000;
+}
+
+.Read-more {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none !important;
+
+  text-align: right;
+  color: #000 !important;
+}
+
+.mdt_para {
+  height: 79px;
+  margin: 10px 0 64px;
+  font-family: Montserrat;
+  font-size: 12.5px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.28;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--black);
+}
+
+.bodytreatmentpara {
+  margin-top: 5%;
+}
+
+.Kidney_Disease {
+  margin-top: 5%;
+  text-align: center;
+  letter-spacing: normal;
+}
+
+.btnsubscribe {
+  border-radius: none !important;
+  background-color: #046a38;
+  padding: 7px;
+  color: #fff;
+}
+
+.reviewsrect {
+  display: flex;
+  margin: auto;
+  margin-left: 7%;
+}
+
+.Rectangle-281 {
+  width: 320px;
+  height: 347px;
+  margin: 170px -74px 39px 17px;
+  padding: 38px 17px 25px 27px;
+  border-radius: 36px;
+  border: solid 1px #000;
+  background-color: #fff;
+}
+
+.Rectangle-277 {
+  width: 380px;
+  height: 400px;
+  margin: 70px 0px 81px 0px;
+  padding: 35px 38px 38px 44px;
+  border-radius: 36px;
+  z-index: 1;
+  border: solid 1px #000;
+  background-color: #cae5af;
+}
+
+.Rectangle-278 {
+  width: 320px;
+  height: 347px;
+  margin: 170px 0px 39px -74px;
+  padding: 38px 21px 25px 23px;
+  border-radius: 36px;
+  border: solid 1px #000;
+  background-color: #fff;
+}
+
+.Rectangle-212 {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 50%;
+}
+
+.footerrow {
+  margin-left: 5%;
+}
+
+.ayurvedahfive {
+  margin: 2%;
+}
+
+.ayurvedapara {
+  margin: 2%;
+}
+
+.allopthypara {
+  margin-top: 10px;
+}
+
+.whyayurvedic {
+  margin-top: 2%;
+  text-align: center;
+}
+
+.ayurvedatable {
+  border: 2px solid #046a38;
+  padding-bottom: 30px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  margin-top: 20px;
+}
+
+.ayurvedatablehead {
+  background-color: #046a38;
+  padding: 15px 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.ayurvedatablebody {
+  border: 1px solid #707070;
+  padding: 15px 0px;
+}
+
+.ayurvedameaning {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 480px) {
+  .naturalslution {
+    text-align: center;
+  }
+
+  .aboutusayurveda {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .naturalslutionforkidney {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .knowmorebtn {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+
+  .rs-panel-body {
+    padding: 0px !important;
+  }
+
+  /* .containerclasst {
+    margin: 0 2%;
+  } */
+  .nature p {
+    text-align: center;
+    margin-top: 2px;
+  }
+
+  .aboutusimg {
+    margin-top: 15% !important;
+  }
+
+  .paths {
+    margin-left: 5%;
+  }
+
+  .mdt {
+    margin-top: 5%;
+  }
+
+  .typsofkidenycol {
+    margin-top: 10%;
+  }
+
+  .inner-arrow {
+    margin-bottom: 120px;
+  }
+
+  .bodytreatment .rs-col {
+    margin-top: 20px !important;
+  }
+
+  .path-23665 {
+    width: 100%;
+  }
+
+  body {
+    font-size: 80% !important;
+  }
+}
+
+/* start */
+
+.Gaugefirstdiv {
+  margin-top: 10%;
+
+  background-color: #046a38;
+  font-size: 48px;
+  text-align: center;
+  color: #fff;
+  padding-top: 20%;
+  padding-bottom: 20%;
+
+  /* animation: count 1s ease-in-out; */
+}
+
+.GaugeChart {
+  background-color: #458164;
+  width: 100%;
+  height: 100%;
+}
+.GaugeChart svg {
+  width: 100%;
+  height: 100%;
+}
+.svg-gauge-text-percent {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  stroke: white;
+  fill: white;
+  stroke-width: 2;
+  font-size: 60px;
+}
+.svg-gauge-text-value {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  stroke: white;
+  fill: white;
+  stroke-width: 2;
+  font-size: 30px;
+}
+.svg-gauge-text-minmax {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  stroke: white;
+  fill: white;
+  stroke-width: 2;
+  font-size: 20px;
+}
+
+/* end */
+.cascade-slider_container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+  /* overflow-x: hidden; */
+}
+.cascade-slider_item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%) scale(0.3);
+  transition: all 1s ease;
+  opacity: 0;
+  z-index: -1;
+  text-align: center;
+}
+.cascade-slider_item.next {
+  left: 50%;
+  transform: translateY(-50%) translateX(-135%) scale(0.8);
+  /* filter: brightness(85%); */
+  opacity: 1;
+  z-index: 1;
+}
+.cascade-slider_item.prev {
+  left: 50%;
+  transform: translateY(-50%) translateX(35%) scale(0.8);
+  /* filter: brightness(85%); */
+  opacity: 1;
+  z-index: 1;
+}
+.cascade-slider_item.now {
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%) scale(1);
+  opacity: 1;
+  z-index: 5;
+  background-color: #cae5af;
+  border-radius: 20px;
+}
+.cascade-slider_arrow {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  z-index: 5;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.cascade-slider_arrow-left {
+  left: 20px;
+  color: #000;
+}
+.cascade-slider_arrow-right {
+  right: 20px;
+  color: #000;
+}
+
+.cascade-slider_nav {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+}
+.cascade-slider_dot {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #4196ef;
+  margin: 3px;
+  transition: all 0.5s;
+  background: none;
+  list-style: none;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.cascade-slider_dot:hover {
+  background: #c0c2c4;
+}
+.cascade-slider_dot.current {
+  background: #2c8fab;
+  width: 17px;
+  height: 17px;
+}
+
+/*Profile card classes*/
+.card {
+  /* background-color: #fff; */
+
+  width: 310px;
+  padding: 20px;
+  height: 300px;
+
+  transition: all 1s 0s;
+  vertical-align: middle;
+  border: 1px solid #000;
+  border-radius: 20px;
+}
+.photo {
+  width: 50%;
+  vertical-align: middle;
+  display: inline;
+}
+.photo img {
+  transform: translateY(-35px) translateX(-10px);
+}
+
+.science_ayurveda_imgmob {
+  display: none;
+}
+
+@media (max-width: 460px) {
+  .science_ayurveda_img {
+    display: none;
+  }
+
+  .for-limited-line {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* number of lines to show */
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
+
+  .font-size-variation {
+    font-size: 22px;
+  }
+
+  .science_ayurveda_imgmob {
+    display: block;
+  }
+
+  .cascade-slider_container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin: 0 auto;
+    /* overflow-x: hidden; */
+  }
+
+  .card {
+    width: 350px;
+    height: 350px;
+    border: 1px solid #000;
+  }
+
+  .cascade-slider_item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scale(0.3);
+    transition: all 1s ease;
+    opacity: 0;
+    z-index: -1;
+    text-align: center;
+  }
+
+  .cascade-slider_item.next {
+    left: 50%;
+    transform: translateY(-50%) translateX(-35%) scale(0.3);
+    filter: brightness(70%);
+    opacity: 1;
+    z-index: 1;
+    /* display: none; */
+  }
+  .cascade-slider_item.prev {
+    left: 50%;
+    transform: translateY(-50%) translateX(20%) scale(0.3);
+    filter: brightness(70%);
+    opacity: 1;
+    z-index: 1;
+    /* display: none; */
+  }
+
+  .cascade-slider_item.now {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-8%) scale(0.5);
+    opacity: 1;
+    z-index: 5;
+  }
+  .cascade-slider_arrow {
+    top: 45%;
+  }
+
+  .cascade-slider_arrow-left {
+    left: 0px;
+  }
+  .cascade-slider_arrow-right {
+    left: 70vw;
+    right: auto;
+  }
+  .cascade-slider_nav {
+    display: none;
+    /* white-space: nowrap;
+    margin-bottom: 0px; */
+  }
+}
+
+@media (min-width: 460px) and (max-width: 680px) {
+  .cascade-slider_item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scale(0.3);
+    transition: all 1s ease;
+    opacity: 0;
+    z-index: -1;
+    text-align: center;
+  }
+  .cascade-slider_item.next {
+    left: 50%;
+    transform: translateY(-50%) translateX(-90%) scale(0.4);
+    filter: brightness(70%);
+    opacity: 1;
+    z-index: 1;
+  }
+  .cascade-slider_item.prev {
+    left: 50%;
+    transform: translateY(-50%) translateX(-10%) scale(0.4);
+    filter: brightness(70%);
+    opacity: 1;
+    z-index: 1;
+  }
+  .cascade-slider_item.now {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scale(0.6);
+    opacity: 1;
+    z-index: 5;
+  }
+  .cascade-slider_arrow-left img {
+    height: 30px;
+    left: 30px;
+  }
+  .cascade-slider_arrow-right img {
+    height: 30px;
+    left: 30px;
+  }
+  /* .cascade-slider_nav {
+    display: none;
+  } */
+}

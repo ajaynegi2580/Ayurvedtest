@@ -1,0 +1,213 @@
+.acutekidney {
+  margin-top: 3%;
+}
+
+.acutekidneybtngroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.acutekidneybtn {
+  border: 1px solid #000 !important;
+  border-radius: 50px !important;
+  width: 150px;
+  height: 40px;
+  font-size: small;
+  text-align: center;
+}
+.acutekidneybtnsign {
+  border: 1px solid #000 !important;
+  border-radius: 50px !important;
+  color: #fff !important;
+  background-color: rgb(4, 61, 4) !important;
+  margin-top: 2%;
+  padding: 8px 30px !important;
+}
+
+.acutkidydish {
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.acutkidydisp {
+  margin-bottom: 30px;
+}
+
+.acutkidydishfive {
+  margin-bottom: 20px;
+}
+
+.acutekidneybtn:hover {
+  color: #fff !important;
+  background-color: rgb(4, 61, 4) !important;
+}
+
+.acutekidneydisease {
+  text-align: left;
+  margin-top: 2%;
+}
+
+.signacutekidney {
+  margin-top: 5%;
+  margin-bottom: 10px;
+}
+
+.acutekidneylastdiv {
+  margin-bottom: 2%;
+}
+
+.openighour {
+  /* border: 1px solid #000; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.nephroticsyndromepart {
+  margin-top: 50%;
+}
+
+.nephroticsyndfive {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 300px;
+  height: 35px;
+  margin-top: 10px !important;
+}
+
+.bookapoin {
+  margin-top: 10px !important;
+}
+
+ul li {
+  margin-top: 10px;
+  size: 50px;
+}
+
+.openighour h5 {
+  margin-bottom: 5%;
+}
+
+.openighourbtn {
+  border-radius: 50px !important;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  color: blue;
+}
+
+/* ARROW-ICON CAROUSEL*/
+
+.carousel-left-arrow {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-right: -3% !important;
+  z-index: 99;
+}
+
+.carousel-right-arrow {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-left: -2% !important;
+  z-index: 99;
+}
+
+.align-center-arrow {
+  height: 60%;
+}
+
+.inner-arrow {
+  height: 40%;
+}
+
+.inner-arrow-circal {
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.creatininecronic {
+  margin-top: 5%;
+  margin-bottom: 10px;
+}
+
+.disease {
+  margin-top: 50%;
+}
+
+.image-mobile {
+  display: none;
+}
+
+.acutekidneydiv {
+  margin-top: -20px;
+  margin-bottom: 15%;
+}
+
+.diagnosischronicdidease {
+  margin-bottom: 15%;
+}
+
+@media screen and (max-width: 480px) {
+  .kidneydiseasemenu {
+    display: none;
+  }
+  .acutkidydish {
+    margin-top: 0px;
+    text-align: center;
+  }
+  .image-mobile {
+    display: block;
+  }
+  .image-desktop {
+    display: none;
+  }
+
+  .acutkidydisp {
+    text-align: center;
+  }
+
+  .acutekidneybtnsign {
+    margin-left: 30%;
+  }
+
+  .acutekidneylastdiv {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .signacutekidney {
+    text-align: center;
+    margin: 30px 0px;
+  }
+
+  .creatininecronic {
+    text-align: center;
+    margin: 30px 0px;
+  }
+
+  .acutediseasetreatment {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .acutkidydishfive {
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  .nephroticsyndfive {
+    text-align: center;
+  }
+
+  .nephroticsyndromepart {
+    margin-top: 10%;
+  }
+}
