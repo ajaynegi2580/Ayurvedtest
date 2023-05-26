@@ -57,7 +57,7 @@ export const Paymentverify = async (req, res) => {
         { new: true }
       );
       // Redirect to the success page
-      res.redirect(`http://localhost:3000/success?id=${BookingId}`);
+      res.redirect(`http://34.227.27.46/success?id=${BookingId}`);
     } else {
       // Payment verification failed
       console.log("Payment verification failed");

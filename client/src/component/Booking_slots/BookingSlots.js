@@ -148,7 +148,7 @@ export default function BookingSlots() {
             description: "Appointment Booking Payment",
             image: "/Img/Logo.png",
             order_id: createOrderResponse.data.order.id,
-            callback_url: `http://localhost:7000/api/v1/payment-verify?${queryParams.toString()}`,
+            callback_url: `http://34.227.27.46:7000/api/v1/payment-verify?${queryParams.toString()}`,
             prefill: {
               name: responseData.name,
               email: responseData.email,
