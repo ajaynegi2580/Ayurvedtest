@@ -1,6 +1,3 @@
-.footer_sec {
-  margin-right: 1px !important;
-}
 .joinayurveda {
   background-color: #ffff;
   margin-top: 4%;
@@ -9,6 +6,11 @@
   border: 1px solid #000;
   z-index: 99;
   position: relative;
+}
+
+.joinayurvedafamily {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .getemail {
@@ -24,6 +26,9 @@
   line-height: 1px;
   z-index: -1;
   margin-bottom: 3%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 0;
 }
 
 .footerow p {
@@ -40,7 +45,7 @@
 .foot_btm {
   width: 100%;
   background: #046a38;
-  padding: 20px 0;
+  padding-top: 20px;
   text-align: left !important;
 }
 .foot_btm p {
@@ -77,15 +82,20 @@
 }
 
 .footerlogo {
-  text-align: center !important;
+  text-align: left !important;
 }
 
 @media screen and (max-width: 480px) {
+  .footer_sec {
+    margin-right: 10px !important;
+  }
   .joinayurvedafamily {
     display: none;
   }
   .footerow {
     padding: 0 20px;
+    display: flex;
+    flex-direction: column-reverse;
   }
   .joinayurveda {
     margin-bottom: -9% !important;
@@ -94,10 +104,7 @@
     text-align: center !important;
     margin-top: 7%;
   }
-  .footerow {
-    display: flex;
-    flex-direction: column-reverse;
-  }
+
   .footerlogo {
     text-align: center !important;
     margin-top: 5%;

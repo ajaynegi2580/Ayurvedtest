@@ -77,3 +77,9 @@
     text-align: center;
   }
 }
+
+@media screen and (min-width: 1920px) {
+  .contactinput {
+    height: 50px !important;
+  }
+}

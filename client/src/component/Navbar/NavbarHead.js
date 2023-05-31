@@ -53,7 +53,7 @@ export default function NavbarHead() {
   return (
     <div>
       <Navbar className="navclass">
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="">
           <img
             src={logo}
             alt="logo"

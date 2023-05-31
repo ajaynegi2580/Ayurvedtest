@@ -145,20 +145,53 @@ export default function Aboutus() {
       <h3 className="homeaboutus">REVIEWS</h3>
 
       <Row className="show-grid">
-        <Col md={8}>
-          <video src={video1} style={{ width: "100%" }} />
+        <Col md={6} sm={12} xs={24} lg={6}>
+          <iframe
+            className="Y-Videos-Style"
+            width="250"
+            height="150"
+            src="https://www.youtube.com/embed/9OISSje2gAo"
+            title="1Ayurveda_v1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </Col>
-        <Col md={8}>
-          <video src={video2} style={{ width: "100%" }} />
+        <Col md={6} sm={12} xs={24} lg={6}>
+          <iframe
+            className="Y-Videos-Style"
+            width="250"
+            height="150"
+            src="https://www.youtube.com/embed/IO_UO8VfJJE"
+            title="1Ayurveda_V2"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </Col>
-        <Col md={8}>
-          <video src={video3} style={{ width: "100%" }} />
+        <Col md={6} sm={12} xs={24} lg={6}>
+          <iframe
+            className="Y-Videos-Style"
+            width="250"
+            height="150"
+            src="https://www.youtube.com/embed/1YsecgFWkEo"
+            title="1Ayurveda_V3"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </Col>
-      </Row>
-
-      <Row className="show-grid">
-        <Col md={8}>
-          <video src={video4} style={{ width: "100%" }} />
+        <Col md={6} sm={12} xs={24} lg={6}>
+          <iframe
+            className="Y-Videos-Style"
+            width="250"
+            height="150"
+            src="https://www.youtube.com/embed/qL2h5x5RzlY"
+            title="1Ayurveda_V4"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </Col>
       </Row>
     </div>

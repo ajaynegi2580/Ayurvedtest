@@ -1,9 +1,20 @@
-import React, { useState, useEffect } from "react";
-import { Row, Col, Button, Schema, Notification, Placeholder } from "rsuite";
+import React, { useState, useEffect, useRef } from "react";
+import {
+  Row,
+  Col,
+  Button,
+  Schema,
+  Notification,
+  Placeholder,
+  Loader,
+  DatePicker,
+} from "rsuite";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "react-datepicker/dist/react-datepicker.css";
 import { axiosPrivate } from "../api/axios";
+import "./assets/css/booking.css";
+import logo from "./assets/image/Logo.png";
 const Message = React.forwardRef(({ type, ...rest }, ref) => {
   return (
     <Notification ref={ref} {...rest} type={type} header={type}>
@@ -32,10 +43,12 @@ export default function BookingSlots() {
     // paymentId: "",
   });
 
+  const inputRef = useRef(null);
   const [available, setAvailable] = useState([]);
   const [loading, setLoading] = useState(false);
   const [defaultSlot, setdefaultSlot] = useState([]);
   const [responseData, setResponseData] = useState();
+
   // const [isAppointmentBooked, setIsAppointmentBooked] = useState(false);
 
   let inputHandler = async (e) => {
@@ -53,6 +66,11 @@ export default function BookingSlots() {
     }
   };
 
+  const openDatePicker = () => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  };
   let checkForm = () => {
     if (
       formData.name === "" ||
@@ -94,12 +112,13 @@ export default function BookingSlots() {
         // setIsAppointmentBooked(true);
         // console.log(isAppointmentBooked);
         // Perform additional actions with the ID if needed
-      } else {
-        console.log("Error:", response.statusText);
-        // Handle error case if needed
+      } else if (response.status === 409) {
+        alert("Appointment is already booked..");
       }
     }
   };
+
+  console.log(responseData);
 
   // For Availability management
   useEffect(() => {
@@ -146,7 +165,7 @@ export default function BookingSlots() {
             currency: "INR",
             name: "1Ayurveda",
             description: "Appointment Booking Payment",
-            image: "/Img/Logo.png",
+            image: logo,
             order_id: createOrderResponse.data.order.id,
             callback_url: `http://34.227.27.46:7000/api/v1/payment-verify?${queryParams.toString()}`,
             prefill: {
@@ -169,17 +188,47 @@ export default function BookingSlots() {
       fetchPaymentKey();
     }
   }, [responseData]);
+
+  const openCalendar = () => {
+    const dateInput = document.getElementById("dateInput");
+
+    dateInput.showPicker();
+  };
+
   return (
     <div>
       <div className="openighour">
         <h5>OPENING HOURS</h5>
         <p>MONDAY - SATURDAY 9:00 AM - 6:00 PM</p>
         <form onSubmit={handleSubmit}>
-          <input
+          {/* <input
+            id="session-date"
+            className="input-style"
             type="date"
             name="selectedDate"
             placeholder="Date"
             min={new Date().toISOString().split("T")[0]}
+            onChange={inputHandler}
+          ></input> */}
+          {/* <DatePicker
+            className="input-style"
+            // value={selectedDate}
+            format="dd/MM/YYY"
+            type="date"
+            name="selectedDate"
+            placeholder="Date"
+            min={new Date().toISOString().split("T")[0]}
+            onChange={inputHandler}
+          /> */}
+
+          <input
+            className="input-style"
+            type="date"
+            name="selectedDate"
+            placeholder="Select Date"
+            id="dateInput"
+            min={new Date().toISOString().split("T")[0]}
+            onClick={() => openCalendar()}
             onChange={inputHandler}
           />
           {formData.selectedDate && (
@@ -230,7 +279,9 @@ export default function BookingSlots() {
                   ))}
                 </Row>
               ) : (
-                <>Loading.........</>
+                <>
+                  <Loader />
+                </>
               )}
               <div style={{ display: "flex", gap: "1rem", padding: "20px" }}>
                 <div
@@ -250,6 +301,7 @@ export default function BookingSlots() {
             </div>
           )}
           <input
+            className="input-style"
             type="text"
             name="name"
             onChange={inputHandler}
@@ -258,6 +310,7 @@ export default function BookingSlots() {
           />
           <input
             type="tel"
+            className="input-style"
             name="phone"
             onChange={inputHandler}
             placeholder="Contact"
@@ -266,6 +319,7 @@ export default function BookingSlots() {
           />
           <input
             type="email"
+            className="input-style"
             name="email"
             onChange={inputHandler}
             placeholder="Email"
@@ -274,6 +328,7 @@ export default function BookingSlots() {
           <input
             type="text"
             name="description"
+            className="input-style"
             onChange={inputHandler}
             placeholder="Description"
             required

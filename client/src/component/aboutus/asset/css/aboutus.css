@@ -25,37 +25,6 @@
   text-align: left;
 }
 
-.openighour {
-  /* border: 1px solid #389bd4 !important; */
-  padding-top: 20px;
-  padding-bottom: 10px;
-  box-shadow: 3px 3px 5px 4px #ccc;
-}
-
-input {
-  width: 300px;
-  height: 35px;
-  margin-top: 10px !important;
-}
-
-.bookapoin {
-  margin-top: 10px !important;
-}
-
-ul li {
-  margin-top: 10px;
-  size: 50px;
-}
-
-.openighour h5 {
-  margin-bottom: 5%;
-}
-
-.openighourbtn {
-  border-radius: 50px !important;
-  background-color: darkgreen !important;
-}
-
 .arrow {
   width: 40px;
   height: 40px;
@@ -142,6 +111,12 @@ ul li {
     margin-top: 5%;
   }
 
+  .Y-Videos-Style {
+    margin-bottom: 10px;
+    width: 300;
+    height: 200;
+  }
+
   .timescheduledmob1 {
     padding-top: 3%;
     margin-left: 2px;
@@ -171,6 +146,10 @@ ul li {
   .holisticayurvdichelth {
     margin-top: 5%;
     text-align: center;
+  }
+
+  .measurement {
+    margin-top: 25px;
   }
 
   .measurement p {

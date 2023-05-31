@@ -7,10 +7,15 @@
   font-family: myFirstFont;
 }
 
-.App {
+body {
   background-image: url("../images/Background.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.natsolforkid {
+  width: 100%;
+  margin: auto auto !important;
 }
 
 .containerclass {
@@ -52,6 +57,7 @@ item:hover {
 
 .naturalslution {
   color: darkred;
+  margin-top: 15%;
 }
 
 .show-grid {
@@ -250,71 +256,6 @@ item:hover {
   margin-top: 30px;
 }
 
-@media screen and (max-width: 480px) {
-  .naturalslution {
-    text-align: center;
-  }
-
-  .aboutusayurveda {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .naturalslutionforkidney {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .knowmorebtn {
-    margin-left: 30%;
-    margin-right: 30%;
-  }
-
-  .rs-panel-body {
-    padding: 0px !important;
-  }
-
-  /* .containerclasst {
-    margin: 0 2%;
-  } */
-  .nature p {
-    text-align: center;
-    margin-top: 2px;
-  }
-
-  .aboutusimg {
-    margin-top: 15% !important;
-  }
-
-  .paths {
-    margin-left: 5%;
-  }
-
-  .mdt {
-    margin-top: 5%;
-  }
-
-  .typsofkidenycol {
-    margin-top: 10%;
-  }
-
-  .inner-arrow {
-    margin-bottom: 120px;
-  }
-
-  .bodytreatment .rs-col {
-    margin-top: 20px !important;
-  }
-
-  .path-23665 {
-    width: 100%;
-  }
-
-  body {
-    font-size: 80% !important;
-  }
-}
-
 /* start */
 
 .Gaugefirstdiv {
@@ -477,7 +418,72 @@ item:hover {
   display: none;
 }
 
-@media (max-width: 460px) {
+@media (max-width: 480px) {
+  .naturalslution {
+    text-align: center;
+  }
+
+  .aboutusayurveda {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .bookappoinbtn {
+    margin-left: 23%;
+  }
+
+  .knowmorebtn {
+    margin-left: 32%;
+  }
+
+  .naturalslutionforkidney {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .rs-panel-body {
+    padding: 0px !important;
+  }
+
+  /* .containerclasst {
+    margin: 0 2%;
+  } */
+  .nature p {
+    text-align: center;
+    margin-top: 2px;
+  }
+
+  .aboutusimg {
+    margin-top: 15% !important;
+  }
+
+  .paths {
+    margin-left: 5%;
+  }
+
+  .mdt {
+    margin-top: 5%;
+  }
+
+  .typsofkidenycol {
+    margin-top: 10%;
+  }
+
+  .inner-arrow {
+    margin-bottom: 120px;
+  }
+
+  .bodytreatment .rs-col {
+    margin-top: 20px !important;
+  }
+
+  .path-23665 {
+    width: 100%;
+  }
+
+  body {
+    font-size: 80% !important;
+  }
   .science_ayurveda_img {
     display: none;
   }
@@ -509,7 +515,7 @@ item:hover {
   .card {
     width: 350px;
     height: 350px;
-    border: 1px solid #000;
+    border: 3px solid #000;
   }
 
   .cascade-slider_item {
@@ -552,10 +558,10 @@ item:hover {
   }
 
   .cascade-slider_arrow-left {
-    left: 0px;
+    left: -13px;
   }
   .cascade-slider_arrow-right {
-    left: 70vw;
+    left: 75vw;
     right: auto;
   }
   .cascade-slider_nav {
@@ -608,4 +614,22 @@ item:hover {
   /* .cascade-slider_nav {
     display: none;
   } */
+}
+
+@media screen and (min-width: 1920px) {
+  .nature {
+    margin-top: 10%;
+  }
+
+  body {
+    font-size: 100% !important;
+  }
+
+  .cascade-slider_arrow-left {
+    left: 200px;
+  }
+  .cascade-slider_arrow-right {
+    left: 50.8vw;
+    right: auto;
+  }
 }

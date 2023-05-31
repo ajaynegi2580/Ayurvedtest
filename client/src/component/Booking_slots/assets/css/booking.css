@@ -1,0 +1,60 @@
+.openighour {
+  /* border: 1px solid #389bd4 !important; */
+  padding-top: 20px;
+  padding-bottom: 10px;
+  box-shadow: 3px 3px 5px 4px #ccc;
+}
+
+input {
+  width: 300px;
+  height: 35px;
+  margin-top: 10px !important;
+}
+
+input#session-date {
+  position: relative;
+  overflow: hidden;
+}
+input#session-date::-webkit-calendar-picker-indicator {
+  display: block;
+  top: 0;
+  left: 0;
+  background: #0000;
+  position: absolute;
+  transform: scale(12);
+}
+
+.bookapoin {
+  margin-top: 10px !important;
+}
+
+ul li {
+  margin-top: 10px;
+  size: 50px;
+}
+
+.openighour h5 {
+  margin-bottom: 5%;
+}
+
+.openighourbtn {
+  border-radius: 50px !important;
+  background-color: darkgreen !important;
+}
+
+@media screen and (max-width: 480px) {
+  .openighour {
+    margin-top: 5%;
+  }
+  .input-style {
+    width: 260px;
+  }
+}
+
+@media screen and (min-width: 1920px) and (max-width: 2500px) {
+  .openighour input {
+    width: 500px !important;
+    height: 50px !important;
+    margin-top: 10px !important;
+  }
+}

@@ -35,11 +35,14 @@ export default function Contact() {
     textarea: "",
   });
 
-  function handleInputChange(newValue, name) {
-    console.log("name: ", newValue);
-    setFormValue({ ...formValue, [name]: newValue });
-  }
-
+  // function handleInputChange(newValue, name) {
+  //   console.log(name, newValue);
+  //   setFormValue((ev) => ({
+  //     ...ev,
+  //     [name]: newValue,
+  //   }));
+  // }
+  console.log(formValue);
   return (
     <div>
       <Row className="show-grid">
@@ -61,18 +64,19 @@ export default function Contact() {
         <Col md={16} sm={24} xs={24}>
           <div className="contactus">
             <h5 className="headingyourdeatail">YOUR DETAIL</h5>
-            <Form fluid model={model} formValue={formValue}>
+            <Form
+              fluid
+              model={model}
+              formValue={formValue}
+              onChange={(formValue, event) => setFormValue(formValue)}
+            >
               <Row className="show-grid">
                 <Col md={12} sm={24} xs={24}>
-                  <Form.Group controlId="name-1">
+                  <Form.Group>
                     <Form.ControlLabel className="formlabel">
                       Name
                     </Form.ControlLabel>
-                    <Form.Control
-                      name="name"
-                      onChange={handleInputChange}
-                      className="contactinput"
-                    />
+                    <Form.Control name="name" className="contactinput" />
                   </Form.Group>
                 </Col>
                 <Col md={12} sm={24} xs={24}>
@@ -81,9 +85,9 @@ export default function Contact() {
                       Email
                     </Form.ControlLabel>
                     <Form.Control
-                      onChange={handleInputChange}
                       name="email"
                       type="email"
+                      className="contactinput"
                     />
                   </Form.Group>
                 </Col>
@@ -95,9 +99,9 @@ export default function Contact() {
                       Phone No.
                     </Form.ControlLabel>
                     <Form.Control
-                      onChange={handleInputChange}
                       name="phone_no"
                       type="tel"
+                      className="contactinput"
                     />
                   </Form.Group>
                 </Col>
@@ -107,9 +111,9 @@ export default function Contact() {
                       City
                     </Form.ControlLabel>
                     <Form.Control
-                      onChange={handleInputChange}
                       name="city"
                       type="city"
+                      className="contactinput"
                     />
                   </Form.Group>
                 </Col>

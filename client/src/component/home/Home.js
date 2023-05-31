@@ -42,14 +42,7 @@ const reviews = [
     rating: 4,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
-  {
-    rating: 4,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    rating: 5,
-    text: "deee orem ipsum dolor sit amet, consectetur adipiscing elit, sed",
-  },
+
   {
     rating: 4,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -103,7 +96,7 @@ export default function Home() {
                 onClick={handleClick}
                 color="green"
                 appearance="primary"
-                className="knowmorebtn"
+                className="bookappoinbtn"
               >
                 <b>Book An Appointment</b>
               </Button>
@@ -114,7 +107,7 @@ export default function Home() {
             <img
               src={Herobanener}
               alt="Herobanener"
-              style={{ width: "85%" }}
+              className="natsolforkid"
             ></img>
           </Col>
         </Row>
@@ -236,12 +229,12 @@ export default function Home() {
           <Col md={24} sm={24}>
             <img
               src={Science_of_Ayurveda}
-              style={{ width: "90%" }}
+              style={{ width: "100%" }}
               className="science_ayurveda_img"
             />
             <img
               src={Science_of_Ayurveda_mobimg}
-              style={{ width: "90%" }}
+              style={{ width: "100%" }}
               className="science_ayurveda_imgmob"
               alt="Science_of_Ayurveda_mobimg"
             />
@@ -409,7 +402,7 @@ export default function Home() {
 
           <Col md={8} sm={12} xs={24}>
             <div className="mdt">
-              <img src={MDT_5} style={{ width: "25%" }} alt="MDT_5" />
+              <img src={MDT_5} style={{ width: "24%" }} alt="MDT_5" />
               <div className="diagnostic_test">Imaging Tests</div>
               <div className="mdt_para">
                 Imaging tests like Computed tomography, Magnetic resonance
@@ -634,14 +627,14 @@ export default function Home() {
               </ol>
 
               <span
-                class="cascade-slider_arrow cascade-slider_arrow-left"
+                className="cascade-slider_arrow cascade-slider_arrow-left"
                 data-action="prev"
                 onClick={nextSlide}
               >
                 <ArrowLeftLineIcon style={{ fontSize: 30 }} />
               </span>
               <span
-                class="cascade-slider_arrow cascade-slider_arrow-right"
+                className="cascade-slider_arrow cascade-slider_arrow-right"
                 data-action="next"
                 onClick={prevSlide}
               >
