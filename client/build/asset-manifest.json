@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.a490b0c5.css",
-    "main.js": "/static/js/main.d72f3827.js",
+    "main.css": "/static/css/main.ec4adb7d.css",
+    "main.js": "/static/js/main.dd056857.js",
     "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
     "static/media/Stage_3.mp4": "/static/media/Stage_3.8625352eca4fb7dc219e.mp4",
     "static/media/Stage_5.mp4": "/static/media/Stage_5.11b0661a6d2762d9d26b.mp4",
     "static/media/Stage_2.mp4": "/static/media/Stage_2.fad52e5fe3e1cb73e5c3.mp4",
-    "static/media/Background.png": "/static/media/Background.7f7555786095ad0e5c27.png",
     "static/media/Stage_1.mp4": "/static/media/Stage_1.c8248547ac83155c246e.mp4",
     "static/media/Stage_4.mp4": "/static/media/Stage_4.4abd96805a811514fc47.mp4",
     "static/media/Cretenine.png": "/static/media/Cretenine.ee0c09535fa518f55e78.png",
@@ -24,6 +23,7 @@
     "static/media/Types_of_Kideny_diseases_3.png": "/static/media/Types_of_Kideny_diseases_3.392d92f7a8df4d6c6272.png",
     "static/media/Types_of_Kideny_diseases_2.png": "/static/media/Types_of_Kideny_diseases_2.fe36abf577026c4f80e0.png",
     "static/media/Types_of_Kideny_diseases_4.png": "/static/media/Types_of_Kideny_diseases_4.437443eacc84776daf16.png",
+    "static/media/Background.webp": "/static/media/Background.f1216a3d28d6e75e30d5.webp",
     "static/media/Types_of_Kideny_diseases_6.png": "/static/media/Types_of_Kideny_diseases_6.0a6602cea9baaf9aac96.png",
     "static/media/About_us_para_image.png": "/static/media/About_us_para_image.603ba786c9c2ffb26b68.png",
     "static/media/Ayurveda.png": "/static/media/Ayurveda.76a3c59c824b03475d9c.png",
@@ -32,15 +32,15 @@
     "static/media/Science_of_Ayurveda_Image.png": "/static/media/Science_of_Ayurveda_Image.5c83cac4997789388797.png",
     "static/media/Science_of_Ayurveda_mobimg.png": "/static/media/Science_of_Ayurveda_mobimg.d8722bc84bda5d6bc374.png",
     "static/media/Why_choose_us_2.png": "/static/media/Why_choose_us_2.ec24c58e2edeaf949379.png",
-    "static/media/Baron_Neue.otf": "/static/media/Baron_Neue.7080d2d10e7fe467b90f.otf",
     "static/media/Logo.png": "/static/media/Logo.188dc8df147ef6ef256c.png",
+    "static/media/Baron_Neue.otf": "/static/media/Baron_Neue.7080d2d10e7fe467b90f.otf",
     "index.html": "/index.html",
-    "main.a490b0c5.css.map": "/static/css/main.a490b0c5.css.map",
-    "main.d72f3827.js.map": "/static/js/main.d72f3827.js.map",
+    "main.ec4adb7d.css.map": "/static/css/main.ec4adb7d.css.map",
+    "main.dd056857.js.map": "/static/js/main.dd056857.js.map",
     "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a490b0c5.css",
-    "static/js/main.d72f3827.js"
+    "static/css/main.ec4adb7d.css",
+    "static/js/main.dd056857.js"
   ]
 }
