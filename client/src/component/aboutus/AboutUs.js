@@ -16,16 +16,16 @@ import "react-datepicker/dist/react-datepicker.css";
 import { axiosPrivate } from "../api/axios";
 import BookingSlots from "../Booking_slots/BookingSlots";
 
-export default function Aboutus() {
+export default function Aboutus(props) {
   return (
     <div className="aboutusban">
       <Row className="About_us_banner">
         <Col md={12} sm={12} xs={12} className="aboutusbancol">
           <h3>ABOUT US</h3>
-          <p>
+          <p className="aboutlogo">
             <img src={logo} style={{ width: "30%" }} alt="about-us-logo" />
           </p>
-          <p>
+          <p className="Transform_your_health">
             "Transform your health and wellbeing with personalized Ayurvedic
             care at our clinic, where ancient healing meets modern medicine"
           </p>

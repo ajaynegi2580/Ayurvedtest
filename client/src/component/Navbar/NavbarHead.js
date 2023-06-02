@@ -53,13 +53,16 @@ export default function NavbarHead() {
   return (
     <div>
       <Navbar className="navclass">
-        <Navbar.Brand href="">
-          <img
-            src={logo}
-            alt="logo"
-            style={{ width: "90px", marginTop: "-30px", marginLeft: "-20px" }}
-          />
-        </Navbar.Brand>
+        <Link to="/">
+          <Navbar.Brand>
+            <img
+              src={logo}
+              alt="logo"
+              className="navlogo"
+              style={{ width: "90px", marginTop: "-3px", marginLeft: "-20px" }}
+            />
+          </Navbar.Brand>
+        </Link>
         <Nav pullRight className="navbarcolleps" id="navcolleps">
           <Link to="/" className="hide-link-decorations">
             <Nav.Item href="/">Home</Nav.Item>

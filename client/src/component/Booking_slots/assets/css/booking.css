@@ -53,8 +53,8 @@ ul li {
 
 @media screen and (min-width: 1920px) and (max-width: 2500px) {
   .openighour input {
-    width: 500px !important;
-    height: 50px !important;
+    width: 80% !important;
+    height: 60px !important;
     margin-top: 10px !important;
   }
 }

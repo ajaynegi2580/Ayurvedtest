@@ -14,7 +14,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 // MongoDB Connection Code
 app.use(function (req, res, next) {
-  res.setHeader("Access-Control-Allow-Origin", "http://34.227.27.46");
+  // for localhost
+  // res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  // for production
+  res.setHeader("Access-Control-Allow-Origin", "http://34.227.27.46:7000");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   res.setHeader("Access-Control-Allow-Credentials", true);
@@ -37,7 +40,7 @@ app.use("/api/v1", UserDetailsRoute); // app.use("/api/slots", import('./routes/
 // Sending Credentials form Here...
 app.get("/api/v1/getkey", (req, res) => {
   // res.status(200).json({ message: "Test successful" });
-  res.status(200).json(config.KEY);
+  res.status(200).json({ key: "rzp_test_dxqhEzG1Q17ssp" });
 });
 
 app.listen(config.PORT, () => {

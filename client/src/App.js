@@ -3,6 +3,7 @@ import { Container } from "rsuite";
 
 import NavbarHead from "./component/Navbar/NavbarHead";
 import Home from "./component/home/Home";
+import { useRef } from "react";
 
 import AboutUs from "./component/aboutus/AboutUs";
 import Footer from "./component/Footer/Footer";
@@ -24,8 +25,11 @@ import AboutUsFive from "./component/aboutus/AboutUsFive";
 import AboutUsSix from "./component/aboutus/AboutUsSix";
 import PaymentSuccess from "./component/Payment/PaymentSuccess";
 import PaymentFailure from "./component/Payment/PaymentFailure";
+import { Alert } from "./component/Notification";
 
 function App() {
+  // const alertRef = useRef();
+  // console.log(alertRef);
   return (
     <div className="App">
       <div className="ayurvedacontainer">

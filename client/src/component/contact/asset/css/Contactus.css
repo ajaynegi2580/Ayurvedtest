@@ -66,6 +66,7 @@
 .contactusbtn {
   width: 200px;
   border-radius: 25px;
+  background-color: darkgreen;
 }
 
 @media screen and (max-width: 480px) {
@@ -75,6 +76,10 @@
   }
   .contactusdis {
     text-align: center;
+  }
+
+  .formobemail {
+    margin-top: 12px;
   }
 }
 

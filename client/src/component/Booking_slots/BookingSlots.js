@@ -9,19 +9,13 @@ import {
   Loader,
   DatePicker,
 } from "rsuite";
-import { toast } from "react-toastify";
+
 import "react-toastify/dist/ReactToastify.css";
 import "react-datepicker/dist/react-datepicker.css";
 import { axiosPrivate } from "../api/axios";
 import "./assets/css/booking.css";
 import logo from "./assets/image/Logo.png";
-const Message = React.forwardRef(({ type, ...rest }, ref) => {
-  return (
-    <Notification ref={ref} {...rest} type={type} header={type}>
-      <Placeholder.Paragraph style={{ width: 220 }} rows={0} />
-    </Notification>
-  );
-});
+import { Alert } from "../Notification";
 
 const nameRule = Schema.Types.StringType().isRequired(
   "This field is required."
@@ -30,7 +24,7 @@ const emailRule = Schema.Types.StringType().isEmail(
   "Please enter a valid email address."
 );
 
-export default function BookingSlots() {
+export default function BookingSlots(props) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -48,8 +42,10 @@ export default function BookingSlots() {
   const [loading, setLoading] = useState(false);
   const [defaultSlot, setdefaultSlot] = useState([]);
   const [responseData, setResponseData] = useState();
+  const [errormsg, seterrormsg] = useState(null);
 
   // const [isAppointmentBooked, setIsAppointmentBooked] = useState(false);
+  const alertRef = useRef();
 
   let inputHandler = async (e) => {
     let { name, value } = !e.target.dataset.name ? e.target : e.target.dataset;
@@ -59,6 +55,7 @@ export default function BookingSlots() {
       let response = await axiosPrivate.get(
         `/check-availability?date=${value}`
       );
+      console.log(response);
       let { data, defaultSlot } = response.data;
       setAvailable(data);
       setdefaultSlot(defaultSlot);
@@ -66,20 +63,12 @@ export default function BookingSlots() {
     }
   };
 
-  const openDatePicker = () => {
-    if (inputRef.current) {
-      inputRef.current.focus();
-    }
-  };
   let checkForm = () => {
     if (
       formData.name === "" ||
       formData.email === "" ||
       formData.phone === "" ||
       formData.description === "" ||
-      // formData.paymentStatus === "pending" ||
-      // formData.orderId === "" ||
-      // formData.paymentId === "" ||
       !formData.selectedDate ||
       !formData.slot
     ) {
@@ -88,37 +77,98 @@ export default function BookingSlots() {
       return false;
     }
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let isError = checkForm();
-    if (isError) {
-      alert("not ok");
-    } else {
-      let response = await axiosPrivate.post(`/book-appointment`, { formData });
-      // console.log(response.data._id);
-      console.log(response);
-      let { data } = response.data;
-      console.log(data);
-      setResponseData(data);
-      console.log(responseData);
-      console.log(responseData._id);
-      if (response.status === 201) {
-        const appointmentId = response.data._id;
-        console.log("ID:", appointmentId);
-        // toast.success(
-        //   "Appointment has been booked, Moving to Payment Page...."
-        // );
-        // setIsAppointmentBooked(true);
-        // console.log(isAppointmentBooked);
-        // Perform additional actions with the ID if needed
-      } else if (response.status === 409) {
-        alert("Appointment is already booked..");
+    try {
+      let isError = checkForm();
+      if (isError) {
+        alertRef.current.showToaster({
+          message: "All fields are required",
+          status: 0,
+        });
+      } else {
+        let response = await axiosPrivate.post(`/book-appointment`, {
+          formData,
+        });
+        let { data } = response.data;
+
+        if (response.status === 201) {
+          const appointmentId = response.data._id;
+          alertRef.current.showToaster({
+            message: "Appointment has been initiated, Moving to Payment Page.",
+
+            status: 1,
+          });
+          const bookingId = data._id;
+
+          const fetchPaymentKey = async () => {
+            try {
+              const response = await axiosPrivate.get("/getkey");
+              const { key } = response.data;
+              console.log(key);
+              const amount = 100;
+              const createOrderResponse = await axiosPrivate.post(
+                "/create-order",
+                {
+                  bookingId,
+                  amount,
+                }
+              );
+
+              const queryParams = new URLSearchParams();
+              queryParams.append("bookingId", data._id);
+              queryParams.append("amount", amount);
+              const options = {
+                key,
+                amount: createOrderResponse.data.order.amount,
+                currency: "INR",
+                name: "1Ayurveda",
+                description: "Appointment Booking Payment",
+                image: logo,
+                order_id: createOrderResponse.data.order.id,
+                // for localuse
+                // callback_url: `http://localhost:7000/api/v1/payment-verify?${queryParams.toString()}`,
+                callback_url: `http://34.227.27.46:7000/api/v1/payment-verify?${queryParams.toString()}`,
+                prefill: {
+                  name: data.name,
+                },
+                theme: {
+                  color: "#046a38",
+                },
+                modal: {
+                  ondismiss: async function () {
+                    setLoading(true);
+                    let response = await axiosPrivate.get(
+                      `/check-availability?date=${formData.selectedDate}`
+                    );
+                    let { data, defaultSlot } = response.data;
+                    setAvailable(data);
+                    setdefaultSlot(defaultSlot);
+                    setLoading(false);
+                  },
+                },
+              };
+
+              const razorpayPayment = new window.Razorpay(options);
+              razorpayPayment.open();
+            } catch (error) {
+              console.log("Errortets:", error.message);
+            }
+          };
+
+          fetchPaymentKey();
+        } else if (response.status === 409) {
+          alert("Appointment is already booked..");
+        }
       }
+    } catch (e) {
+      console.log(props.alertRef);
+      alertRef.current.showToaster({
+        message: e.response.data.message,
+        status: 0,
+      });
     }
   };
-
-  console.log(responseData);
 
   // For Availability management
   useEffect(() => {
@@ -131,61 +181,10 @@ export default function BookingSlots() {
     }
   }, [formData.selectedDate]);
 
-  // Manage the stage using Useffects.
-
   useEffect(() => {
     if (responseData) {
       // <Message type="success" />;
       //   toast.success("Appointment has been booked, Moving to Payment Page....");
-      alert("Appointment has been booked, Moving to Payment Page....");
-
-      const bookingId = responseData._id;
-      console.log(bookingId);
-
-      const fetchPaymentKey = async () => {
-        try {
-          const response = await axiosPrivate.get("/getkey");
-          const { key } = response.data;
-          console.log(key);
-          const amount = 500;
-          const createOrderResponse = await axiosPrivate.post("/create-order", {
-            bookingId,
-            amount,
-          });
-          console.log(createOrderResponse.data);
-          console.log(createOrderResponse.data.order.id);
-
-          const queryParams = new URLSearchParams();
-          queryParams.append("bookingId", responseData._id);
-          queryParams.append("amount", amount);
-
-          const options = {
-            key,
-            amount: createOrderResponse.data.order.amount,
-            currency: "INR",
-            name: "1Ayurveda",
-            description: "Appointment Booking Payment",
-            image: logo,
-            order_id: createOrderResponse.data.order.id,
-            callback_url: `http://34.227.27.46:7000/api/v1/payment-verify?${queryParams.toString()}`,
-            prefill: {
-              name: responseData.name,
-              email: responseData.email,
-              phone: responseData.phone,
-            },
-            theme: {
-              color: "#046a38",
-            },
-          };
-
-          const razorpayPayment = new window.Razorpay(options);
-          razorpayPayment.open();
-        } catch (error) {
-          console.log("Error:", error.message);
-        }
-      };
-
-      fetchPaymentKey();
     }
   }, [responseData]);
 
@@ -194,33 +193,13 @@ export default function BookingSlots() {
 
     dateInput.showPicker();
   };
-
   return (
     <div>
       <div className="openighour">
+        <Alert ref={alertRef} />
         <h5>OPENING HOURS</h5>
         <p>MONDAY - SATURDAY 9:00 AM - 6:00 PM</p>
         <form onSubmit={handleSubmit}>
-          {/* <input
-            id="session-date"
-            className="input-style"
-            type="date"
-            name="selectedDate"
-            placeholder="Date"
-            min={new Date().toISOString().split("T")[0]}
-            onChange={inputHandler}
-          ></input> */}
-          {/* <DatePicker
-            className="input-style"
-            // value={selectedDate}
-            format="dd/MM/YYY"
-            type="date"
-            name="selectedDate"
-            placeholder="Date"
-            min={new Date().toISOString().split("T")[0]}
-            onChange={inputHandler}
-          /> */}
-
           <input
             className="input-style"
             type="date"

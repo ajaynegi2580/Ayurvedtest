@@ -48,7 +48,12 @@ export default function Footer() {
             <Row className="footerow">
               <Col md={1}></Col>
               <Col sm={24} md={11} className="footerlogo">
-                <img src={logo} alt="logo" style={{ width: "30%" }} />
+                <img
+                  src={logo}
+                  className="handlelogo"
+                  alt="logo"
+                  style={{ width: "30%" }}
+                />
               </Col>
               <Col sm={24} md={11} xs={24}>
                 <Row>
@@ -100,9 +105,7 @@ export default function Footer() {
             </p>
             <Row className="footerow2">
               <Col sm={24} md={12} xs={24}>
-                <p className="footercompanyname">
-                  @DETROIT CONSULTANTS INDIA PRIVATE LIMITED ALL RIGHTS RESERVED
-                </p>
+                <p className="footercompanyname">1Ayurveda</p>
 
                 <Row>
                   <Col md={8} sm={8} xs={8}>

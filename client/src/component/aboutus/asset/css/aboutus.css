@@ -7,6 +7,11 @@
   padding-top: 100px;
 }
 
+.aboutlogo {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
 .About_us_banner {
   background-image: url("../images/About_us_hero_banner.png");
   background-size: cover;
@@ -107,6 +112,13 @@
 }
 
 @media screen and (max-width: 480px) {
+  .Transform_your_health {
+    margin: 0;
+  }
+  .aboutlogo {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
   .openighour {
     margin-top: 5%;
   }

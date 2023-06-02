@@ -81,7 +81,7 @@ export default function Contact() {
                 </Col>
                 <Col md={12} sm={24} xs={24}>
                   <Form.Group controlId="email-1">
-                    <Form.ControlLabel className="formlabel">
+                    <Form.ControlLabel className="formlabel formobemail">
                       Email
                     </Form.ControlLabel>
                     <Form.Control
@@ -107,7 +107,7 @@ export default function Contact() {
                 </Col>
                 <Col md={12} sm={24} xs={24}>
                   <Form.Group controlId="email-1">
-                    <Form.ControlLabel className="formlabel">
+                    <Form.ControlLabel className="formlabel formobemail">
                       City
                     </Form.ControlLabel>
                     <Form.Control
@@ -127,7 +127,6 @@ export default function Contact() {
               </Form.Group>
 
               <Button
-                color="green"
                 appearance="primary"
                 className="contactusbtn"
                 type="submit"

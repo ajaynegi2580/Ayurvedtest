@@ -6,7 +6,7 @@ import logo from "../home/asset/images/Logo.png";
 import Major_Diagonistics_banner from "./asset/images/Major_Diagonistics_banner.png";
 import BookingSlots from "../Booking_slots/BookingSlots";
 import "rsuite/dist/rsuite.min.css";
-export default function AboutUsOne() {
+export default function AboutUsOne(props) {
   return (
     <div>
       <div>
@@ -59,7 +59,7 @@ export default function AboutUsOne() {
               </p>
             </Col>
             <Col md={10}>
-              <BookingSlots />
+              <BookingSlots alertRef={props.alertRef} />
             </Col>
             <Col md={2}></Col>
           </Row>

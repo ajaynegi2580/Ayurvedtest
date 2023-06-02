@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Button } from "rsuite";
+import { Row, Col, Button, Panel, PanelGroup, Placeholder } from "rsuite";
 import Nephrotic_syndrome from "../aboutus/asset/images/Nephrotic_syndrome.png";
 import Ayurvedaimg from "../aboutus/asset/images/Ayurveda.png";
 import BookingSlots from "../Booking_slots/BookingSlots";
@@ -118,114 +118,178 @@ export default function Ayurveda() {
         <Row className="ayurvedatreatmenttable">
           <Col md={2}></Col>
           <Col md={20} className="ayurvedatable">
-            <Row>
-              <Col md={1}></Col>
-              <Col md={6} className="ayurvedatablehead">
-                AYURVEDA
-              </Col>
-              <Col md={2}></Col>
-              <Col md={6} className="ayurvedatablehead">
-                AYURVEDA
-              </Col>
-              <Col md={2}></Col>
-              <Col md={6} className="ayurvedatablehead">
-                AYURVEDA
-              </Col>
-              <Col md={1}></Col>
-            </Row>
-            <Row className="ayurvedameaning">
-              <Col md={1}></Col>
-              <Col md={6} className="ayurvedatablebody">
-                Meaning
-              </Col>
-              <Col md={2}></Col>
-              <Col md={6} className="ayurvedatablebody">
-                Ayur + Veda = Medical science of Ancient India
-              </Col>
-              <Col md={2}></Col>
-              <Col md={6} className="ayurvedatablebody">
-                Allos + pathos = Drug therapy
-              </Col>
-            </Row>
-            <Row className="ayurvedameaning">
-              <Col md={1}></Col>
-              <Col md={6} className="ayurvedatablebody">
-                Meaning
-              </Col>
-              <Col md={2}></Col>
-              <Col md={6} className="ayurvedatablebody">
-                Ayurvedic medicine is made up of only all-natural herbs,
-                aoshidis, and a balanced diet.
-              </Col>
-              <Col md={2}></Col>
-              <Col md={6} className="ayurvedatablebody">
-                Drugs are employed with the medication in allopathic treatment.
-              </Col>
-            </Row>
-            <Row className="ayurvedameaning">
-              <Col md={1}></Col>
-              <Col md={6} className="ayurvedatablebody">
-                Side effects
-              </Col>
-              <Col md={2}></Col>
-              <Col md={6} className="ayurvedatablebody">
-                The drug is entirely natural and organic. They receive treatment
-                without any negative effects.
-              </Col>
-              <Col md={2}></Col>
-              <Col md={6} className="ayurvedatablebody">
-                In a small number of cases, people who are allergic to the
-                medications are more prone to experience negative effects.
-              </Col>
-            </Row>
-            <Row className="ayurvedameaning">
-              <Col md={1}></Col>
-              <Col md={6} className="ayurvedatablebody">
-                Approach
-              </Col>
-              <Col md={2}></Col>
-              <Col md={6} className="ayurvedatablebody">
-                When Ayurveda treats the underlying problem, the cure is
-                long-lasting.
-              </Col>
-              <Col md={2}></Col>
-              <Col md={6} className="ayurvedatablebody">
-                The main cause of the sickness is never addressed. The patient
-                never receives lasting treatment from it.
-              </Col>
-            </Row>
-            <Row className="ayurvedameaning">
-              <Col md={1}></Col>
-              <Col md={6} className="ayurvedatablebody">
-                Treatment
-              </Col>
-              <Col md={2}></Col>
-              <Col md={6} className="ayurvedatablebody">
-                It's permanent
-              </Col>
-              <Col md={2}></Col>
-              <Col md={6} className="ayurvedatablebody">
-                It's temporary
-              </Col>
-            </Row>
-            <Row className="ayurvedameaning">
-              <Col md={1}></Col>
-              <Col md={6} className="ayurvedatablebody">
-                Treatment time
-              </Col>
-              <Col md={2}></Col>
-              <Col md={6} className="ayurvedatablebody">
-                Since the treatment targets the underlying cause and results in
-                a patient's permanent healing, it takes some time for the
-                treatment to produce results.
-              </Col>
-              <Col md={2}></Col>
-              <Col md={6} className="ayurvedatablebody">
-                Because the condition is just temporary, very little time is
-                needed to take the drug.
-              </Col>
-            </Row>
+            <div className="forweb">
+              <Row>
+                <Col md={1}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablehead">
+                  AYURVEDA
+                </Col>
+                <Col md={2}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablehead">
+                  AYURVEDA
+                </Col>
+                <Col md={2}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablehead">
+                  ALLOPATHY
+                </Col>
+                <Col md={1}></Col>
+              </Row>
+              <Row className="ayurvedameaning">
+                <Col md={1}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablebody">
+                  Meaning
+                </Col>
+                <Col md={2}></Col>
+                <Col md={6} className="ayurvedatablebody">
+                  Ayur + Veda = Medical science of Ancient India
+                </Col>
+                <Col md={2}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablebody">
+                  Allos + pathos = Drug therapy
+                </Col>
+              </Row>
+              <Row className="ayurvedameaning">
+                <Col md={1}></Col>
+                <Col md={6} className="ayurvedatablebody">
+                  Meaning
+                </Col>
+                <Col md={2}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablebody">
+                  Ayurvedic medicine is made up of only all-natural herbs,
+                  aoshidis, and a balanced diet.
+                </Col>
+                <Col md={2}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablebody">
+                  Drugs are employed with the medication in allopathic
+                  treatment.
+                </Col>
+              </Row>
+              <Row className="ayurvedameaning">
+                <Col md={1}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablebody">
+                  Side effects
+                </Col>
+                <Col md={2}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablebody">
+                  The drug is entirely natural and organic. They receive
+                  treatment without any negative effects.
+                </Col>
+                <Col md={2}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablebody">
+                  In a small number of cases, people who are allergic to the
+                  medications are more prone to experience negative effects.
+                </Col>
+              </Row>
+              <Row className="ayurvedameaning">
+                <Col md={1}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablebody">
+                  Approach
+                </Col>
+                <Col md={2}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablebody">
+                  When Ayurveda treats the underlying problem, the cure is
+                  long-lasting.
+                </Col>
+                <Col md={2}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablebody">
+                  The main cause of the sickness is never addressed. The patient
+                  never receives lasting treatment from it.
+                </Col>
+              </Row>
+              <Row className="ayurvedameaning">
+                <Col md={1}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablebody">
+                  Treatment
+                </Col>
+                <Col md={2}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablebody">
+                  It's permanent
+                </Col>
+                <Col md={2}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablebody">
+                  It's temporary
+                </Col>
+              </Row>
+              <Row className="ayurvedameaning">
+                <Col md={1}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablebody">
+                  Treatment time
+                </Col>
+                <Col md={2}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablebody">
+                  Since the treatment targets the underlying cause and results
+                  in a patient's permanent healing, it takes some time for the
+                  treatment to produce results.
+                </Col>
+                <Col md={2}></Col>
+                <Col md={6} sm={22} xs={22} className="ayurvedatablebody">
+                  Because the condition is just temporary, very little time is
+                  needed to take the drug.
+                </Col>
+              </Row>
+            </div>
+            <PanelGroup
+              accordion
+              defaultActiveKey={1}
+              bordered
+              className="formobile"
+            >
+              <Panel header="AYURVEDA" eventKey={1} id="panel1">
+                <p className="ayurvedatablebody">Meaning</p>
+                <p className="ayurvedatablebody">Meaning</p>
+                <p className="ayurvedatablebody">Side effects</p>
+                <p className="ayurvedatablebody">Approach</p>
+                <p className="ayurvedatablebody">Treatment</p>
+                <p className="ayurvedatablebody">Treatment time</p>
+              </Panel>
+              <Panel header="AYURVEDA" eventKey={2} id="panel2">
+                <p className="ayurvedatablebody">
+                  Ayur + Veda = Medical science of Ancient India
+                </p>
+                <p className="ayurvedatablebody">
+                  Ayurvedic medicine is made up of only all-natural herbs,
+                  aoshidis, and a balanced diet.
+                </p>
+                <p className="ayurvedatablebody">
+                  The drug is entirely natural and organic. They receive
+                  treatment without any negative effects.
+                </p>
+                <p className="ayurvedatablebody">
+                  When Ayurveda treats the underlying problem, the cure is
+                  long-lasting.
+                </p>
+                <p className="ayurvedatablebody">It's permanent</p>
+                <p className="ayurvedatablebody">
+                  Since the treatment targets the underlying cause and results
+                  in a patient's permanent healing, it takes some time for the
+                  treatment to produce results.
+                </p>
+              </Panel>
+              <Panel header="ALLOPATHY" eventKey={3} id="panel3">
+                <p className="ayurvedatablebody">
+                  Allos + pathos = Drug therapy
+                </p>
+                <p className="ayurvedatablebody">
+                  Drugs are employed with the medication in allopathic
+                  treatment.
+                </p>
+                <p className="ayurvedatablebody">
+                  In a small number of cases, people who are allergic to the
+                  medications are more prone to experience negative effects.
+                </p>
+                <p className="ayurvedatablebody">
+                  The main cause of the sickness is never addressed. The patient
+                  never receives lasting treatment from it.
+                </p>
+                <p className="ayurvedatablebody">It's temporary</p>
+                <p className="ayurvedatablebody">
+                  Because the condition is just temporary, very little time is
+                  needed to take the drug.
+                </p>
+              </Panel>
+            </PanelGroup>
           </Col>
+
           <Col md={2}></Col>
         </Row>
       </div>

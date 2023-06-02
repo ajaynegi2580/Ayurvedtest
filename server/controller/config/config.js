@@ -10,7 +10,5 @@ const config = {
   HOST: process.env.HOST,
   SERVICE: process.env.SERVICE,
   MAIL_PORT: process.env.MAIL_PORT,
-  KEY: process.env.KEY,
-  KEY_SECRET: process.env.KEY_SECRET,
 };
 export default config;

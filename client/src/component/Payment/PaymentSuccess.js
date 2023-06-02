@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Row, Col, Button } from "rsuite";
 import { axiosPrivate } from "../api/axios";
 import logo from "../home/asset/images/Logo.png";
 import axios from "axios";
+import { Alert } from "../Notification";
 
 // const handlePrint = () => {
 //   const sectionToPrint = document.getElementById("sectionId").innerHTML;
@@ -60,6 +61,7 @@ const handlePrint = () => {
 const PaymentSuccess = () => {
   const [userId, setUserId] = useState();
   const [UserAllDetails, setUserAllDetails] = useState();
+  const alertRef = useRef();
   console.log(userId);
   // console.log(UserDetails.name);
   const location = useLocation();
@@ -85,8 +87,12 @@ const PaymentSuccess = () => {
           if (data.response) {
             setUserAllDetails(data.response);
           }
-          console.log(UserAllDetails);
-          // console.log(UserDetails.name);
+
+          alertRef.current.showToaster({
+            message:
+              "Please download the PDF file below and make sure to carry it with you on your appointment date.",
+            status: 1,
+          });
         }
       } catch (err) {
         console.log(`${err} Error while fetching booked user details data`);
@@ -110,6 +116,7 @@ const PaymentSuccess = () => {
         }}
       >
         <Row>
+          <Alert ref={alertRef} />
           <Col md={3} sm={8} xs={8}>
             <img src={logo} style={{ width: "100%" }} />
           </Col>

@@ -82,7 +82,11 @@
 }
 
 .footerlogo {
-  text-align: left !important;
+  text-align: center !important;
+}
+
+.handlelogo {
+  margin-top: 5%;
 }
 
 @media screen and (max-width: 480px) {
@@ -123,6 +127,11 @@
 
   .footerheadpara {
     margin-top: 10% !important;
+  }
+
+  .foot_btm {
+    width: 99vw;
+    overflow: hidden;
   }
 }
 

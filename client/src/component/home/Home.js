@@ -40,16 +40,24 @@ import BookingSlots from "../Booking_slots/BookingSlots";
 const reviews = [
   {
     rating: 4,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "Thanks to SMB Solutions' Ayurveda website, I found effective treatments for my kidney disease. Their expertise and personalized approach improved my kidney function and overall health. Highly recommended.",
   },
 
   {
     rating: 4,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "SMB Solutions' Ayurveda website provided invaluable insights and treatments for my kidney disease. Their expertise halted the progression of my condition and improved my well-being. Trustworthy and reliable.",
   },
   {
     rating: 5,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "Grateful to SMB Solutions' Ayurveda website for their expertise in managing kidney diseases. Their treatments reduced symptoms and offered hope for a better future. Highly recommendeda.",
+  },
+  {
+    rating: 4,
+    text: "SMB Solutions' Ayurveda website guided me in managing Creatinine and Proteinuria. Their practical advice and treatments made a noticeable difference in my kidney health. Thank you.",
+  },
+  {
+    rating: 5,
+    text: "I found reliable solutions for my kidney disease on SMB Solutions' Ayurveda website. Their expertise and holistic approach improved my condition and quality of life. Thank you, SMB Solutions.",
   },
 ];
 
@@ -93,7 +101,6 @@ export default function Home() {
             </p>
             <Link to="/about">
               <Button
-                onClick={handleClick}
                 color="green"
                 appearance="primary"
                 className="bookappoinbtn"

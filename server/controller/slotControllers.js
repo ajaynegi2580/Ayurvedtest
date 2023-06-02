@@ -5,7 +5,7 @@ export const BookingController = async (req, res) => {
   const { name, email, phone, description, slot, selectedDate } =
     req.body.formData;
 
-  console.log(name, email, phone, description, slot, selectedDate);
+  // console.log(name, email, phone, description, slot, selectedDate);
 
   // Check if the requested slot is available or not
   const availableSlots = [
@@ -28,10 +28,19 @@ export const BookingController = async (req, res) => {
   ];
 
   // Check if the requested date is in the past
+
   if (moment().diff(moment(selectedDate), "days") > 0) {
     return res
       .status(400)
       .json({ message: "Cannot book appointments for past dates" });
+  }
+
+  if (
+    moment(selectedDate + " " + slot, "YYYY-MM-DD hh:mma").isBefore(moment())
+  ) {
+    return res
+      .status(400)
+      .json({ message: "Cannot book appointments for past time slots" });
   }
 
   // Incase Users enters wrong time slot.

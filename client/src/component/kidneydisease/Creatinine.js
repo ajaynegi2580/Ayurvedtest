@@ -4,7 +4,7 @@ import Nephrotic_syndrome from "../aboutus/asset/images/Nephrotic_syndrome.png";
 import Cretenine from "../aboutus/asset/images/Cretenine.png";
 import { Link } from "react-router-dom";
 import BookingSlots from "../Booking_slots/BookingSlots";
-export default function Creatinine() {
+export default function Creatinine(props) {
   return (
     <div>
       <div className="acutekidney">

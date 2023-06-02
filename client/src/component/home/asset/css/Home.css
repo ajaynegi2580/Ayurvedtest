@@ -7,8 +7,13 @@
   font-family: myFirstFont;
 }
 
-body {
+/* .App {
   background-image: url("../images/Background.png");
+  background-repeat: no-repeat;
+} */
+
+body {
+  background-image: url("../images/Background.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -418,7 +423,40 @@ item:hover {
   display: none;
 }
 
+.bookappoinbtn {
+  color: #fff !important;
+  background-color: darkgreen !important;
+}
+
+.formobile {
+  display: none;
+}
+
+.forweb {
+  display: block;
+}
+
 @media (max-width: 480px) {
+  body {
+    background-image: url("../images/Background.webp");
+    background-repeat: no-repeat;
+    background-size: auto !important;
+  }
+
+  .ayurvedatable {
+    width: 90%;
+    border-radius: 0;
+    margin: 5%;
+  }
+
+  .formobile {
+    display: block;
+  }
+
+  .forweb {
+    display: none;
+  }
+
   .naturalslution {
     text-align: center;
   }
@@ -568,6 +606,14 @@ item:hover {
     display: none;
     /* white-space: nowrap;
     margin-bottom: 0px; */
+  }
+
+  .ayurvedatablehead {
+    margin: 10px;
+  }
+
+  .ayurvedatablebody {
+    margin: 10px;
   }
 }
 

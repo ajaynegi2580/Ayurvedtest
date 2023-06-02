@@ -1,12 +1,12 @@
 import Booking from "../models/Booking-schema.js";
 import Razorpay from "razorpay";
 import crypto from "crypto";
-import config from "../controller/config/config.js";
 
 const instance = new Razorpay({
-  key_id: config.KEY,
-  key_secret: config.KEY_SECRET,
+  key_id: "rzp_test_dxqhEzG1Q17ssp",
+  key_secret: "mhqrpgqrcwZbXPVB9rWFHH23",
 });
+
 export const CreateOrder = async (req, res) => {
   try {
     const { bookingId, amount } = req.body;
@@ -17,9 +17,10 @@ export const CreateOrder = async (req, res) => {
       currency: "INR",
       receipt: bookingId,
     });
-
+    console.log("tetstsss::::::::::::::");
     res.status(200).json({ order });
   } catch (err) {
+    console.error("etst:::::::", err);
     res.status(400).json("Error while creating payment order..");
   }
 };
@@ -34,7 +35,7 @@ export const Paymentverify = async (req, res) => {
     console.log(amount);
     console.log(req.query.bookingId);
 
-    const key_secret = config.KEY_SECRET;
+    const key_secret = "mhqrpgqrcwZbXPVB9rWFHH23";
 
     const generated_signature = crypto
       .createHmac("sha256", key_secret)
@@ -58,6 +59,9 @@ export const Paymentverify = async (req, res) => {
       );
       // Redirect to the success page
       res.redirect(`http://34.227.27.46/success?id=${BookingId}`);
+
+      // for loacltest
+      // res.redirect(`http://localhost:3000/success?id=${BookingId}`);
     } else {
       // Payment verification failed
       console.log("Payment verification failed");
