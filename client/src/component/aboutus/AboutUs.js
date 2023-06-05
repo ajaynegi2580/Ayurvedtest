@@ -18,7 +18,10 @@ import BookingSlots from "../Booking_slots/BookingSlots";
 
 export default function Aboutus(props) {
   return (
-    <div className="aboutusban">
+    <div
+      className="aboutusban"
+      style={{ flexShrink: 0, WebkitFlex: 0, whiteSpace: "normal" }}
+    >
       <Row className="About_us_banner">
         <Col md={12} sm={12} xs={12} className="aboutusbancol">
           <h3>ABOUT US</h3>
