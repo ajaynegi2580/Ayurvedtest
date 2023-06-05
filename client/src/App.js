@@ -25,7 +25,6 @@ import AboutUsFive from "./component/aboutus/AboutUsFive";
 import AboutUsSix from "./component/aboutus/AboutUsSix";
 import PaymentSuccess from "./component/Payment/PaymentSuccess";
 import PaymentFailure from "./component/Payment/PaymentFailure";
-import { Alert } from "./component/Notification";
 
 function App() {
   // const alertRef = useRef();

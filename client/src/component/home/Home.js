@@ -91,6 +91,7 @@ export default function Home() {
             <h2 className="naturalslution">
               A NATURAL SOLUTION FOR YOUR KIDNEY
             </h2>
+            <h5 className="naturalslutionfree">GO DIALYSIS FREE IN 3 MONTHS</h5>
 
             <p>
               The 1ayurveda Kidney Care Center is dedicated to combining

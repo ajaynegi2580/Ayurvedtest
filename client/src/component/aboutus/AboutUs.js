@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 // import About_us_hero_banner from "./asset/images/About_us_hero_banner.png";
 import About_us_para_image from "./asset/images/About_us_para_image.png";
 import logo from "../home/asset/images/Logo.png";
+import doctorimg from "./asset/images/1Ayurvedadoctor_1.jpg";
 import Types_of_Kideny_diseases_2 from "../home/asset/images/Types_of_Kideny_diseases_2.png";
 import video1 from "./asset/videos/Stage_1.mp4";
 import video2 from "./asset/videos/Stage_2.mp4";
@@ -33,7 +34,7 @@ export default function Aboutus(props) {
             care at our clinic, where ancient healing meets modern medicine"
           </p>
         </Col>
-        <Col md={12}></Col>
+        <Col md={12} xs={12}></Col>
       </Row>
 
       <Row className="show-grid holidayicayurvdic">
@@ -77,16 +78,16 @@ export default function Aboutus(props) {
         <Col md={1}></Col>
         <Col md={11} className="measurement">
           <h5 className="approchtokidneyheading">
-            APPROACH TO KINDEY DISEASES IN AYURVEDA
+            APPROACH TO KINDEY DISEASES AT 1AYURVEDA
           </h5>
           <ul>
             <li>
-              While they focus on removing the problems and simultaneously
-              addressing the underlying causes of kidney disorders, Ayurvedic
+              While we focus on removing the problems and simultaneously
+              addressing the underlying causes of kidney disorders, 1Ayurveda
               medicines are quite efficient at treating kidney ailments.
-              Ayurveda makes use of several unusual natural medicines that are
+              1Ayurveda makes use of several unusual natural medicines that are
               quite successful at treating renal issues. In addition to treating
-              the difficulties, Ayurvedic medications regenerate the dead tissue
+              the difficulties, 1Ayurveda medications regenerate the dead tissue
               in the kidneys.
             </li>
             <li>
@@ -94,11 +95,11 @@ export default function Aboutus(props) {
               the release of insulin, and the body’s capacity to break down fats
               and other undesirable chemicals. Yoga therefore relieves or guards
               against kidney disease issues by enhancing these types of health
-              features. It is an essential part of Ayurvedic renal treatment.
+              features. It is an essential part of 1Ayurveda’s renal treatment.
             </li>
             <li>
               Everyone is aware that what we eat has a big influence on how we
-              feel. Ayurvedic kidney care includes both nutrition and herbal
+              feel. 1Ayurveda kidney care includes both nutrition and herbal
               medications. We provide you with a nutrition strategy tailored to
               your renal condition. In order for you to benefit the most from
               your Ayurvedic treatment, we adjust your diet based on how you’re
@@ -110,7 +111,7 @@ export default function Aboutus(props) {
               leading a stressful life, can contribute to various health
               concerns, including renal illnesses. We at 1Ayurveda want to
               identify these engrained patterns in your life and help you get
-              rid of them. Ayurvedic kidney therapy can be accelerated by
+              rid of them. 1Ayurveda kidney therapy can be accelerated by
               altering one’s lifestyle, which is also a crucial step in the
               procedure.
             </li>

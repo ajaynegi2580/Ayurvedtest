@@ -65,6 +65,11 @@ item:hover {
   margin-top: 15%;
 }
 
+.naturalslutionfree {
+  color: darkred;
+  margin-top: 2%;
+}
+
 .show-grid {
   margin-top: 5%;
 }
@@ -440,7 +445,10 @@ item:hover {
   body {
     background-image: url("../images/Background.webp");
     background-repeat: no-repeat;
-    background-size: auto !important;
+    background-size: auto;
+  }
+  .naturalslutionfree {
+    text-align: center;
   }
 
   .ayurvedatable {

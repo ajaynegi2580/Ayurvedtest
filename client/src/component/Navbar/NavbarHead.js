@@ -6,40 +6,65 @@ import { GrClose } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import "./css/Navbar.css";
 
-const CustomNav = ({ active, onSelect, ...props }) => {
+const CustomNav = ({ active, onSelect, onClose, ...props }) => {
+  const handleLinkClick = () => {
+    onSelect(""); // Clear the active event key
+    onClose(); // Close the navbar
+  };
+
   return (
-    <Nav {...props} vertical onSelect={onSelect} style={{ width: 100 }}>
+    <Nav
+      {...props}
+      vertical
+      activeKey={active}
+      onSelect={onSelect}
+      style={{ width: 100 }}
+    >
       <Nav.Item eventKey="home">
-        <Link to="">Home</Link>
+        <Link to="" onClick={handleLinkClick}>
+          Home
+        </Link>
       </Nav.Item>
-      <Nav.Item eventKey="home">
-        <Link to="/about">AboutUs</Link>
+      <Nav.Item eventKey="about">
+        <Link to="/about" onClick={handleLinkClick}>
+          AboutUs
+        </Link>
       </Nav.Item>
       <Nav.Menu title="Kidney Disease" className="navmenubar">
-        <Link to="/kidneydisease/acutekidneydisease">
+        <Link to="/kidneydisease/acutekidneydisease" onClick={handleLinkClick}>
           <Nav.Item>Acute Kidney Disease</Nav.Item>
         </Link>
-        <Link to="/kidneydisease/chronickidneydisease">
+        <Link
+          to="/kidneydisease/chronickidneydisease"
+          onClick={handleLinkClick}
+        >
           <Nav.Item>Chronic Kidney Disease</Nav.Item>
         </Link>
-        <Link to="/kidneydisease/polycystickidneydisease">
+        <Link
+          to="/kidneydisease/polycystickidneydisease"
+          onClick={handleLinkClick}
+        >
           <Nav.Item>Polycystic Kidney Disease</Nav.Item>
         </Link>
-        <Link to="/kidneydisease/nephroticsyndrome">
+        <Link to="/kidneydisease/nephroticsyndrome" onClick={handleLinkClick}>
           <Nav.Item>Nephrotic Syndrome</Nav.Item>
         </Link>
-        <Link to="/kidneydisease/creatinine">
+        <Link to="/kidneydisease/creatinine" onClick={handleLinkClick}>
           <Nav.Item>Creatinine</Nav.Item>
         </Link>
-        <Link to="/kidneydisease/proteinuria">
+        <Link to="/kidneydisease/proteinuria" onClick={handleLinkClick}>
           <Nav.Item>Proteinuria</Nav.Item>
         </Link>
       </Nav.Menu>
       <Nav.Item eventKey="ayurveda">
-        <Link to="/ayurveda">Ayurveda</Link>
+        <Link to="/ayurveda" onClick={handleLinkClick}>
+          Ayurveda
+        </Link>
       </Nav.Item>
       <Nav.Item eventKey="contact">
-        <Link to="/contact">Contact</Link>
+        <Link to="/contact" onClick={handleLinkClick}>
+          Contact
+        </Link>
       </Nav.Item>
     </Nav>
   );
@@ -49,6 +74,9 @@ export default function NavbarHead() {
   const [active, setActive] = React.useState("");
 
   const [navbarcolleps, setnavbarcolleps] = useState(false);
+  const handleNavbarClose = () => {
+    setnavbarcolleps(false);
+  };
 
   return (
     <div>
@@ -140,7 +168,8 @@ export default function NavbarHead() {
       <CustomNav
         active={active}
         onSelect={setActive}
-        className={`navformobile  ${navbarcolleps && "active"}`}
+        className={`navformobile ${navbarcolleps ? "active" : ""}`}
+        onClose={handleNavbarClose}
       />
     </div>
   );
