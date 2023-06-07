@@ -36,16 +36,11 @@ export const getAvailability = async (req, res) => {
     const bookings = await Booking.find({
       date: { $gte: startOfDay, $lte: endOfDay },
     });
-    // console.log(bookings);
 
     // Remove booked slots from the available slots
     bookings.forEach(async (booking) => {
-      console.log(booking);
-
       if (booking && booking.paymentStatus === "pending") {
         await Booking.findByIdAndDelete(booking._id);
-
-        console.log("I'm here at delete pending paymemt location...");
       }
 
       const index = availableSlots.indexOf(booking.slot);

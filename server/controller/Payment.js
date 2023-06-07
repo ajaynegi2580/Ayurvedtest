@@ -1,26 +1,26 @@
 import Booking from "../models/Booking-schema.js";
 import Razorpay from "razorpay";
 import crypto from "crypto";
+import config from "./config/config.js";
+import { sendConfirmationEmail } from "../controller/emailcontroller.js";
 
 const instance = new Razorpay({
-  key_id: "rzp_test_dxqhEzG1Q17ssp",
-  key_secret: "mhqrpgqrcwZbXPVB9rWFHH23",
+  key_id: config.key_id,
+  key_secret: config.key_secret,
 });
-
 export const CreateOrder = async (req, res) => {
   try {
     const { bookingId, amount } = req.body;
-    console.log(bookingId);
+
     // Generate an order using Razorpay API
     const order = await instance.orders.create({
       amount: amount * 100,
       currency: "INR",
       receipt: bookingId,
     });
-    console.log("tetstsss::::::::::::::");
+
     res.status(200).json({ order });
   } catch (err) {
-    console.error("etst:::::::", err);
     res.status(400).json("Error while creating payment order..");
   }
 };
@@ -29,21 +29,15 @@ export const Paymentverify = async (req, res) => {
   try {
     const { razorpay_order_id, razorpay_payment_id, razorpay_signature } =
       req.body;
-    console.log(razorpay_order_id);
     const BookingId = req.query.bookingId;
     const amount = req.query.amount;
-    console.log(amount);
-    console.log(req.query.bookingId);
 
-    const key_secret = "mhqrpgqrcwZbXPVB9rWFHH23";
+    const key_secret = config.key_secret;
 
     const generated_signature = crypto
       .createHmac("sha256", key_secret)
       .update(`${razorpay_order_id}|${razorpay_payment_id}`)
       .digest("hex");
-    console.log(generated_signature);
-
-    console.log(razorpay_signature);
     if (generated_signature === razorpay_signature) {
       await Booking.findOneAndUpdate(
         { _id: BookingId },
@@ -62,6 +56,31 @@ export const Paymentverify = async (req, res) => {
 
       // for loacltest
       // res.redirect(`http://localhost:3000/success?id=${BookingId}`);
+
+      if (generated_signature === razorpay_signature) {
+        const response = await Booking.findById({ _id: BookingId });
+        const {
+          name,
+          email,
+          phone,
+          date,
+          slot,
+          paymentStatus,
+          amount,
+          paymentId,
+        } = response;
+        const newdate = new Date(date).toLocaleDateString();
+        await sendConfirmationEmail(
+          name,
+          email,
+          phone,
+          newdate,
+          slot,
+          paymentStatus,
+          amount,
+          paymentId
+        );
+      }
     } else {
       // Payment verification failed
       console.log("Payment verification failed");

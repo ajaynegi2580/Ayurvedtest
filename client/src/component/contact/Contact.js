@@ -35,14 +35,6 @@ export default function Contact() {
     textarea: "",
   });
 
-  // function handleInputChange(newValue, name) {
-  //   console.log(name, newValue);
-  //   setFormValue((ev) => ({
-  //     ...ev,
-  //     [name]: newValue,
-  //   }));
-  // }
-  console.log(formValue);
   return (
     <div>
       <Row className="show-grid">

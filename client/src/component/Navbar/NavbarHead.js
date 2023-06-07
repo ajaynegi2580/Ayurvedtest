@@ -100,7 +100,7 @@ export default function NavbarHead() {
             <Nav.Item href="/about">About us</Nav.Item>
           </Link>
 
-          <Nav.Menu title="Kidney Disease">
+          <Nav.Menu title="Kidney Disease" style={{ color: "#000" }}>
             <Link
               to="/kidneydisease/acutekidneydisease"
               className="hide-link-decorations"

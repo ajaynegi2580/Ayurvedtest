@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, Icon } from "rsuite";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import logo from "../home/asset/images/Logo.png";
+import logo from "../home/asset/images/Logofot.png";
 
 import "./asset/css/Footer.css";
 export default function Footer() {

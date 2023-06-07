@@ -91,7 +91,7 @@ export default function Home() {
             <h2 className="naturalslution">
               A NATURAL SOLUTION FOR YOUR KIDNEY
             </h2>
-            <h5 className="naturalslutionfree">GO DIALYSIS FREE IN 3 MONTHS</h5>
+            <h6 className="naturalslutionfree">GO DIALYSIS FREE IN 3 MONTHS</h6>
 
             <p>
               The 1ayurveda Kidney Care Center is dedicated to combining
@@ -267,13 +267,7 @@ export default function Home() {
               className="bodytreatmentimg"
               alt="Why_choose_us_1"
             />
-            <h6>Body types and treatment</h6>
-            <p className="bodytreatmentpara">
-              As all bodies are different so is the way to treat each person
-              uniquely. We at 1ayurveda treat each kidney patient individually
-              based on their symptoms and condition because every kidney disease
-              case is unique.
-            </p>
+            <h6>AYURVEDA</h6>
           </Col>
           <Col md={1} sm={0}></Col>
           <Col md={7} sm={12}>
@@ -282,12 +276,7 @@ export default function Home() {
               className="bodytreatmentimg"
               alt="Why_choose_us_2"
             />
-            <h6>Quality of Herbal Medicine</h6>
-            <p className="bodytreatmentpara">
-              The products we offer are made of pure certified Grade A herbs and
-              are guaranteed to be free of chemicals, steroids or metals and
-              have no known side effects.
-            </p>
+            <h6>YOGA AS PER PATIENT</h6>
           </Col>
           <Col md={1} sm={0}></Col>
           <Col md={7} sm={12}>
@@ -296,11 +285,7 @@ export default function Home() {
               className="bodytreatmentimg"
               alt="Why_choose_us_3"
             />
-            <h6>Certification</h6>
-            <p className="bodytreatmentpara">
-              1ayurveda Kidney Care Centre is an ISO certified facility and has
-              been helping kidney patients for almost two decades.
-            </p>
+            <h6>AYURVEDIC DIET TREATMENT</h6>
           </Col>
         </Row>
         <Row className="show-grid">

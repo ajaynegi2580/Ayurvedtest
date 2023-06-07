@@ -402,10 +402,7 @@ item:hover {
   height: 17px;
 }
 
-/*Profile card classes*/
 .card {
-  /* background-color: #fff; */
-
   width: 310px;
   padding: 20px;
   height: 300px;
@@ -622,6 +619,51 @@ item:hover {
 
   .ayurvedatablebody {
     margin: 10px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 680px) {
+  .cascade-slider_arrow-left {
+    left: -13px;
+  }
+  .cascade-slider_arrow-right {
+    left: 75vw;
+    right: auto;
+  }
+  .card {
+    width: 340px;
+    height: 350px;
+    border: 3px solid #000;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 680px) {
+  .cascade-slider_arrow-left {
+    left: -13px;
+  }
+  .cascade-slider_arrow-right {
+    left: 75vw;
+    right: auto;
+  }
+  .card {
+    width: 360px;
+    height: 350px;
+    border: 3px solid #000;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 680px) {
+  .cascade-slider_arrow-left {
+    left: -13px;
+  }
+  .cascade-slider_arrow-right {
+    left: 75vw;
+    right: auto;
+  }
+  .card {
+    width: 380px;
+    height: 350px;
+    border: 3px solid #000;
   }
 }
 

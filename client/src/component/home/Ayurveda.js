@@ -122,7 +122,7 @@ export default function Ayurveda() {
               <Row>
                 <Col md={1}></Col>
                 <Col md={6} sm={22} xs={22} className="ayurvedatablehead">
-                  AYURVEDA
+                  ANALOGY
                 </Col>
                 <Col md={2}></Col>
                 <Col md={6} sm={22} xs={22} className="ayurvedatablehead">
@@ -234,7 +234,7 @@ export default function Ayurveda() {
               bordered
               className="formobile"
             >
-              <Panel header="AYURVEDA" eventKey={1} id="panel1">
+              <Panel header="ANALOGY" eventKey={1} id="panel1">
                 <p className="ayurvedatablebody">Meaning</p>
                 <p className="ayurvedatablebody">Meaning</p>
                 <p className="ayurvedatablebody">Side effects</p>

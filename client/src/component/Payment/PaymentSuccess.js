@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { Row, Col, Button } from "rsuite";
+import { Row, Col, Button, Loader } from "rsuite";
 import { axiosPrivate } from "../api/axios";
 import logo from "../home/asset/images/Logo.png";
 import axios from "axios";
@@ -33,7 +33,6 @@ import { Alert } from "../Notification";
 
 const handlePrint = () => {
   const sectionToPrint = document.getElementById("sectionId").cloneNode(true);
-  console.log(sectionToPrint);
   const printButton = sectionToPrint.querySelector("#printButton");
   const downloadButton = sectionToPrint.querySelector("#downloadButton");
   if (printButton && downloadButton) {
@@ -62,28 +61,22 @@ const PaymentSuccess = () => {
   const [userId, setUserId] = useState();
   const [UserAllDetails, setUserAllDetails] = useState();
   const alertRef = useRef();
-  console.log(userId);
-  // console.log(UserDetails.name);
+
   const location = useLocation();
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
     const id = queryParams.get("id");
     setUserId(id);
-    console.log(id);
   }, [location.search]);
 
   useEffect(() => {
     const getdata = async () => {
-      console.log(userId);
       try {
         if (userId) {
           let response = await axiosPrivate.get(
             `/check-appointment?id=${userId}`
           );
           let { data } = response;
-          // console.log(data.response);
-          console.log(data.response);
-          // console.log(data.name);
           if (data.response) {
             setUserAllDetails(data.response);
           }

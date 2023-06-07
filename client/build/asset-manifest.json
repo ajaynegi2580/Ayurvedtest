@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cb335270.css",
-    "main.js": "/static/js/main.ccd0e045.js",
+    "main.css": "/static/css/main.f44a0934.css",
+    "main.js": "/static/js/main.1749bb85.js",
     "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
     "static/media/Stage_3.mp4": "/static/media/Stage_3.8625352eca4fb7dc219e.mp4",
     "static/media/Stage_5.mp4": "/static/media/Stage_5.11b0661a6d2762d9d26b.mp4",
@@ -9,9 +9,9 @@
     "static/media/Stage_1.mp4": "/static/media/Stage_1.c8248547ac83155c246e.mp4",
     "static/media/Stage_4.mp4": "/static/media/Stage_4.4abd96805a811514fc47.mp4",
     "static/media/Cretenine.png": "/static/media/Cretenine.ee0c09535fa518f55e78.png",
-    "static/media/About_us_hero_banner.png": "/static/media/About_us_hero_banner.8fbae94d5aa04138f56f.png",
     "static/media/Chronic_Kidney_Disease.png": "/static/media/Chronic_Kidney_Disease.90f61c3ed4e64694af30.png",
     "static/media/Major_Diagonistics_banner.png": "/static/media/Major_Diagonistics_banner.a6c9836e6feba530600d.png",
+    "static/media/About_us_hero_banner.png": "/static/media/About_us_hero_banner.a0de0d0412ba3840063d.png",
     "static/media/Proteinuria.png": "/static/media/Proteinuria.d1653302515a3e802832.png",
     "static/media/Nephrotic_syndrome.png": "/static/media/Nephrotic_syndrome.e80a25e47aa5589051ad.png",
     "static/media/Polysystic_Kidney_diease.png": "/static/media/Polysystic_Kidney_diease.d292e77637995a12ce4f.png",
@@ -28,20 +28,21 @@
     "static/media/Types_of_Kideny_diseases_6.png": "/static/media/Types_of_Kideny_diseases_6.0a6602cea9baaf9aac96.png",
     "static/media/About_us_para_image.png": "/static/media/About_us_para_image.603ba786c9c2ffb26b68.png",
     "static/media/Ayurveda.png": "/static/media/Ayurveda.76a3c59c824b03475d9c.png",
-    "static/media/Why_choose_us_3.png": "/static/media/Why_choose_us_3.fcd2bc220072898ae55f.png",
     "static/media/Why_choose_us_1.png": "/static/media/Why_choose_us_1.24ba57067226cce4bb2f.png",
     "static/media/Science_of_Ayurveda_Image.png": "/static/media/Science_of_Ayurveda_Image.5c83cac4997789388797.png",
     "static/media/Science_of_Ayurveda_mobimg.png": "/static/media/Science_of_Ayurveda_mobimg.d8722bc84bda5d6bc374.png",
-    "static/media/Why_choose_us_2.png": "/static/media/Why_choose_us_2.ec24c58e2edeaf949379.png",
-    "static/media/Logo.png": "/static/media/Logo.188dc8df147ef6ef256c.png",
+    "static/media/Why_choose_us_3.png": "/static/media/Why_choose_us_3.927ecb108087b5a9b8e8.png",
+    "static/media/Logofot.png": "/static/media/Logofot.53ef37069e1c4a9a60b7.png",
+    "static/media/Why_choose_us_2.png": "/static/media/Why_choose_us_2.325a38696d51c3870647.png",
+    "static/media/Logo.png": "/static/media/Logo.5b66788296d8e39602a1.png",
     "static/media/Baron_Neue.otf": "/static/media/Baron_Neue.7080d2d10e7fe467b90f.otf",
     "index.html": "/index.html",
-    "main.cb335270.css.map": "/static/css/main.cb335270.css.map",
-    "main.ccd0e045.js.map": "/static/js/main.ccd0e045.js.map",
+    "main.f44a0934.css.map": "/static/css/main.f44a0934.css.map",
+    "main.1749bb85.js.map": "/static/js/main.1749bb85.js.map",
     "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb335270.css",
-    "static/js/main.ccd0e045.js"
+    "static/css/main.f44a0934.css",
+    "static/js/main.1749bb85.js"
   ]
 }

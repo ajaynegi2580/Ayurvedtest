@@ -10,5 +10,7 @@ const config = {
   HOST: process.env.HOST,
   SERVICE: process.env.SERVICE,
   MAIL_PORT: process.env.MAIL_PORT,
+  key_id: process.env.RAZORPAY_SEC_KEY,
+  key_secret: process.env.RAZORPAY_SEC_ID,
 };
 export default config;

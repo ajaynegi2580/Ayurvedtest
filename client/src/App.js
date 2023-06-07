@@ -27,8 +27,6 @@ import PaymentSuccess from "./component/Payment/PaymentSuccess";
 import PaymentFailure from "./component/Payment/PaymentFailure";
 
 function App() {
-  // const alertRef = useRef();
-  // console.log(alertRef);
   return (
     <div className="App">
       <div className="ayurvedacontainer">

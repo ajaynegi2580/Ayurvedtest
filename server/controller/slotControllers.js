@@ -5,8 +5,6 @@ export const BookingController = async (req, res) => {
   const { name, email, phone, description, slot, selectedDate } =
     req.body.formData;
 
-  // console.log(name, email, phone, description, slot, selectedDate);
-
   // Check if the requested slot is available or not
   const availableSlots = [
     "9:00am",

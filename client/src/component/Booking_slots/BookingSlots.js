@@ -55,7 +55,7 @@ export default function BookingSlots(props) {
       let response = await axiosPrivate.get(
         `/check-availability?date=${value}`
       );
-      console.log(response);
+
       let { data, defaultSlot } = response.data;
       setAvailable(data);
       setdefaultSlot(defaultSlot);
@@ -65,10 +65,10 @@ export default function BookingSlots(props) {
 
   let checkForm = () => {
     if (
-      formData.name === "" ||
-      formData.email === "" ||
-      formData.phone === "" ||
-      formData.description === "" ||
+      formData.name.trim().length === 0 ||
+      formData.email.trim().length === 0 ||
+      formData.phone.trim().length === 0 ||
+      formData.description.trim().length === 0 ||
       !formData.selectedDate ||
       !formData.slot
     ) {
@@ -105,7 +105,6 @@ export default function BookingSlots(props) {
             try {
               const response = await axiosPrivate.get("/getkey");
               const { key } = response.data;
-              console.log(key);
               const amount = 100;
               const createOrderResponse = await axiosPrivate.post(
                 "/create-order",
@@ -127,8 +126,8 @@ export default function BookingSlots(props) {
                 image: logo,
                 order_id: createOrderResponse.data.order.id,
                 // for localuse
-                // callback_url: `http://localhost:7000/api/v1/payment-verify?${queryParams.toString()}`,
-                callback_url: `http://34.227.27.46:7000/api/v1/payment-verify?${queryParams.toString()}`,
+                callback_url: `http://localhost:7000/api/v1/payment-verify?${queryParams.toString()}`,
+                // callback_url: `http://34.227.27.46:7000/api/v1/payment-verify?${queryParams.toString()}`,
                 prefill: {
                   name: data.name,
                 },
@@ -152,7 +151,7 @@ export default function BookingSlots(props) {
               const razorpayPayment = new window.Razorpay(options);
               razorpayPayment.open();
             } catch (error) {
-              console.log("Errortets:", error.message);
+              response.status("Errortets:", error.message);
             }
           };
 
@@ -162,7 +161,6 @@ export default function BookingSlots(props) {
         }
       }
     } catch (e) {
-      console.log(props.alertRef);
       alertRef.current.showToaster({
         message: e.response.data.message,
         status: 0,
