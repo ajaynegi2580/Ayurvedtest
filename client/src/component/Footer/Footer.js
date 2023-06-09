@@ -105,7 +105,7 @@ export default function Footer() {
             </p>
             <Row className="footerow2">
               <Col sm={24} md={12} xs={24}>
-                <p className="footercompanyname">1Ayurveda</p>
+                <p className="footercompanyname">1AYURVEDA SMB SOLUTIONS</p>
 
                 <Row>
                   <Col md={8} sm={8} xs={8}>
