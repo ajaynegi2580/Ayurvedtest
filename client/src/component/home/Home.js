@@ -91,8 +91,13 @@ export default function Home() {
             <h2 className="naturalslution">
               A NATURAL SOLUTION FOR YOUR KIDNEY
             </h2>
-            <h6 className="naturalslutionfree">GO DIALYSIS FREE IN 3 MONTHS</h6>
-
+            <h6 className="naturalslutionfree">
+              GO DIALYSIS FREE IN 3 MONTHS*
+            </h6>
+            <p>
+              *Patients with additional ailments might take longer time than 3
+              months to go dialysis free.
+            </p>
             <p>
               The 1ayurveda Kidney Care Center is dedicated to combining
               Ayurveda medical practises with cutting-edge medical treatment.

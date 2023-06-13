@@ -108,21 +108,19 @@ export default function Footer() {
                 <p className="footercompanyname">1AYURVEDA SMB SOLUTIONS</p>
 
                 <Row>
-                  <Col md={8} sm={8} xs={8}>
-                    <p>
-                      <u>Privacy Policy</u>
-                    </p>
+                  <Col md={6} sm={6} xs={8}>
+                    <Link to="/Privacy" style={{ textDecoration: "none" }}>
+                      <p>Privacy Policy</p>
+                    </Link>
                   </Col>
-                  <Col md={8} sm={8} xs={8}>
-                    <p>
-                      <u>Terms of Use</u>
-                    </p>
+                  <Col md={10} sm={10} xs={10}>
+                    <Link to="/Cancellation" style={{ textDecoration: "none" }}>
+                      <p>Cancellation and Return Policy</p>
+                    </Link>
                   </Col>
-                  <Col md={8} sm={8} xs={8}>
-                    <Link to="/contact">
-                      <p>
-                        <u>Contact Us</u>
-                      </p>
+                  <Col md={8} sm={8} xs={6}>
+                    <Link to="/contact" style={{ textDecoration: "none" }}>
+                      <p>Contact Us</p>
                     </Link>
                   </Col>
                 </Row>

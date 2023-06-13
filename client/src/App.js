@@ -25,7 +25,8 @@ import AboutUsFive from "./component/aboutus/AboutUsFive";
 import AboutUsSix from "./component/aboutus/AboutUsSix";
 import PaymentSuccess from "./component/Payment/PaymentSuccess";
 import PaymentFailure from "./component/Payment/PaymentFailure";
-
+import Cancellation from "./component/Constant/Cancellation";
+import Privacy from "./component/Constant/Privacy";
 function App() {
   return (
     <div className="App">
@@ -69,6 +70,8 @@ function App() {
             <Route path="thankyoupage" element={<ThankyouPage />} />
             <Route path="/success" element={<PaymentSuccess />} />
             <Route path="/failure" element={<PaymentFailure />} />
+            <Route path="/Cancellation" element={<Cancellation />} />
+            <Route path="/Privacy" element={<Privacy />} />
           </Routes>
         </Container>
         <Container className="containerclasst">

@@ -15,9 +15,9 @@ app.use(cors());
 // MongoDB Connection Code
 app.use(function (req, res, next) {
   // for localhost
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  // res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   // for production
-  // res.setHeader("Access-Control-Allow-Origin", "http://34.227.27.46");
+  res.setHeader("Access-Control-Allow-Origin", "http://34.227.27.46");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   res.setHeader("Access-Control-Allow-Credentials", true);

@@ -126,8 +126,8 @@ export default function BookingSlots(props) {
                 image: logo,
                 order_id: createOrderResponse.data.order.id,
                 // for localuse
-                callback_url: `http://localhost:7000/api/v1/payment-verify?${queryParams.toString()}`,
-                // callback_url: `http://34.227.27.46:7000/api/v1/payment-verify?${queryParams.toString()}`,
+                // callback_url: `http://localhost:7000/api/v1/payment-verify?${queryParams.toString()}`,
+                callback_url: `http://34.227.27.46:7000/api/v1/payment-verify?${queryParams.toString()}`,
                 prefill: {
                   name: data.name,
                 },
