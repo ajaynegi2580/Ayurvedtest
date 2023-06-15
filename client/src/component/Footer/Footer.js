@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import logo from "../home/asset/images/Logofot.png";
 
 import "./asset/css/Footer.css";
-export default function Footer() {
+export default function Footer({ jump }) {
   return (
     <div>
       <div className="footer_sec">
@@ -61,23 +61,83 @@ export default function Footer() {
                     <p className="footerheadpara">
                       <b>HOME</b>
                     </p>
-                    <p>About us</p>
-                    <p>Science of ayurveda</p>
-                    <p>Why choose us</p>
-                    <p>Major diagnostic tests</p>
-                    <p>Types of kidney diseases</p>
-                    <p>Reviews</p>
+                    <p
+                      onClick={() => jump("about", "/")}
+                      style={{ cursor: "pointer" }}
+                    >
+                      About us
+                    </p>
+                    <p
+                      onClick={() => jump("science", "/")}
+                      style={{ cursor: "pointer" }}
+                    >
+                      Science of ayurveda
+                    </p>
+                    <p
+                      onClick={() => jump("choose", "/")}
+                      style={{ cursor: "pointer" }}
+                    >
+                      Why choose us
+                    </p>
+                    <p
+                      onClick={() => jump("diagnostic", "/")}
+                      style={{ cursor: "pointer" }}
+                    >
+                      Major diagnostic tests
+                    </p>
+                    <p
+                      onClick={() => jump("kidney-disease", "/")}
+                      style={{ cursor: "pointer" }}
+                    >
+                      Types of kidney diseases
+                    </p>
+                    <p
+                      onClick={() => jump("reviews", "/")}
+                      style={{ cursor: "pointer" }}
+                    >
+                      Reviews
+                    </p>
                   </Col>
                   <Col md={7} sm={12} xs={12}>
                     <p className="footerheadpara">
                       <b>KIDNEY DISEASE</b>
                     </p>
-                    <p>Acute Kidney Disease</p>
-                    <p>Chronic Kidney Disease</p>
-                    <p>Polycystic Kidney Disease</p>
-                    <p>Nephrotic Syndrome</p>
-                    <p>Creatinine</p>
-                    <p>Proteinuria</p>
+                    <Link
+                      to="/kidneydisease/acutekidneydisease"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <p>Acute Kidney Disease</p>
+                    </Link>
+                    <Link
+                      to="/kidneydisease/chronickidneydisease"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <p>Chronic Kidney Disease</p>
+                    </Link>
+                    <Link
+                      to="/kidneydisease/polycystickidneydisease"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <p>Polycystic Kidney Disease</p>
+                    </Link>
+                    <Link
+                      to="/kidneydisease/nephroticsyndrome"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <p>Nephrotic Syndrome</p>
+                    </Link>
+                    <Link
+                      to="/kidneydisease/creatinine"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <p>Creatinine</p>
+                    </Link>
+                    <Link
+                      to="/kidneydisease/proteinuria"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <p>Proteinuria</p>
+                    </Link>
                   </Col>
                   <Col md={8}>
                     <p className="footerheadpara">

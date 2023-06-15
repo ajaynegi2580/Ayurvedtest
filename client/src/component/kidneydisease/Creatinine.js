@@ -162,15 +162,17 @@ export default function Creatinine(props) {
                 dysfunction. This kidney condition most frequently affects
                 youngsters between the ages of 2 and 6.
               </p>
-              <p className="bookapoin">
-                <Button
-                  color="green"
-                  appearance="primary"
-                  className="openighourbtn"
-                >
-                  KNOW MORE
-                </Button>
-              </p>
+              <Link to="/kidneydisease/nephroticsyndrome">
+                <p className="bookapoin">
+                  <Button
+                    color="green"
+                    appearance="primary"
+                    className="openighourbtn"
+                  >
+                    KNOW MORE
+                  </Button>
+                </p>
+              </Link>
             </div>
           </Col>
           <Col md={1}></Col>

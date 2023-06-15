@@ -1,9 +1,14 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import { Container } from "rsuite";
-
+import { useEffect } from "react";
 import NavbarHead from "./component/Navbar/NavbarHead";
 import Home from "./component/home/Home";
-import { useRef } from "react";
 
 import AboutUs from "./component/aboutus/AboutUs";
 import Footer from "./component/Footer/Footer";
@@ -28,13 +33,37 @@ import PaymentFailure from "./component/Payment/PaymentFailure";
 import Cancellation from "./component/Constant/Cancellation";
 import Privacy from "./component/Constant/Privacy";
 function App() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const jump = (e, path) => {
+    console.log(location.pathname);
+    if (location.pathname === path) {
+      let elem = document.getElementById(e);
+      if (elem !== null) elem.scrollIntoView();
+    } else {
+      navigate(path);
+
+      setTimeout(() => {
+        let elem = document.getElementById(e);
+        if (elem !== null) elem.scrollIntoView();
+      }, 100);
+    }
+  };
+
+  // Extracts pathname property(key) from an object
+
+  // Automatically scrolls to top whenever pathname changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
     <div className="App">
       <div className="ayurvedacontainer">
         <Container className="containerclass">
           <NavbarHead />
           <Routes>
-            <Route path="/" index element={<Home />} />
+            <Route path="/" index element={<Home jump={jump} />} />
 
             <Route path="about" element={<AboutUs />} />
             <Route
@@ -75,7 +104,7 @@ function App() {
           </Routes>
         </Container>
         <Container className="containerclasst">
-          <Footer />
+          <Footer jump={jump} />
         </Container>
       </div>
     </div>

@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
+import { Link } from "react-router-dom";
 // import About_us_hero_banner from "./asset/images/About_us_hero_banner.png";
 import About_us_para_image from "./asset/images/About_us_para_image.png";
 import logo from "../home/asset/images/Logo.png";
 import doctorimg from "./asset/images/1Ayurvedadoctor_1.jpg";
 import Types_of_Kideny_diseases_2 from "../home/asset/images/Types_of_Kideny_diseases_2.png";
-import video1 from "./asset/videos/Stage_1.mp4";
-import video2 from "./asset/videos/Stage_2.mp4";
-import video3 from "./asset/videos/Stage_3.mp4";
-import video4 from "./asset/videos/Stage_4.mp4";
-import video5 from "./asset/videos/Stage_5.mp4";
+
 import { Row, Col, Button, Schema, Notification, Placeholder } from "rsuite";
 
 import "./asset/css/aboutus.css";
@@ -68,7 +65,7 @@ export default function Aboutus(props) {
           />
         </Col>
         <Col md={1}></Col>
-        <Col md={10}>
+        <Col md={10} id="bookslots">
           <BookingSlots />
         </Col>
         <Col md={1}></Col>
@@ -133,15 +130,17 @@ export default function Aboutus(props) {
               On the rare chance that it is discovered, over half of them are
               unable to receive a workable course of treatment.
             </p>
-            <p className="bookapoin">
-              <Button
-                color="green"
-                appearance="primary"
-                className="openighourbtn"
-              >
-                KNOW MORE
-              </Button>
-            </p>
+            <Link to="/kidneydisease/chronickidneydisease">
+              <p className="bookapoin">
+                <Button
+                  color="green"
+                  appearance="primary"
+                  className="openighourbtn"
+                >
+                  KNOW MORE
+                </Button>
+              </p>
+            </Link>
           </div>
         </Col>
         <Col md={1}></Col>

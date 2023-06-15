@@ -269,6 +269,9 @@ item:hover {
 /* start */
 
 .Gaugefirstdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 10%;
 
   background-color: #046a38;

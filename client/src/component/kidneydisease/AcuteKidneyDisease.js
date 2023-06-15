@@ -155,15 +155,17 @@ export default function AcuteKidneyDisease() {
                 On the rare chance that it is discovered, over half of them are
                 unable to receive a workable course of treatment.
               </p>
-              <p className="bookapoin">
-                <Button
-                  color="green"
-                  appearance="primary"
-                  className="openighourbtn"
-                >
-                  KNOW MORE
-                </Button>
-              </p>
+              <Link to="/kidneydisease/chronickidneydisease">
+                <p className="bookapoin">
+                  <Button
+                    color="green"
+                    appearance="primary"
+                    className="openighourbtn"
+                  >
+                    KNOW MORE
+                  </Button>
+                </p>
+              </Link>
             </div>
           </Col>
           <Col md={1}></Col>

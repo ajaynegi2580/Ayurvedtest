@@ -35,6 +35,7 @@ import MDT_6 from "./asset/images/MDT_6.png";
 import ArrowLeftLineIcon from "@rsuite/icons/ArrowLeftLine";
 import ArrowRightLineIcon from "@rsuite/icons/ArrowRightLine";
 import PageEndIcon from "@rsuite/icons/PageEnd";
+import CountDown from "./CountDown";
 import BookingSlots from "../Booking_slots/BookingSlots";
 
 const reviews = [
@@ -61,7 +62,7 @@ const reviews = [
   },
 ];
 
-export default function Home() {
+export default function Home({ target, jump }) {
   const [showComponent, setShowComponent] = useState(false);
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -105,15 +106,16 @@ export default function Home() {
               each patient's degree of kidney illness, we also aim to restore
               each person's health and give them a fresh start in life.
             </p>
-            <Link to="/about">
-              <Button
-                color="green"
-                appearance="primary"
-                className="bookappoinbtn"
-              >
-                <b>Book An Appointment</b>
-              </Button>
-            </Link>
+
+            <Button
+              color="green"
+              appearance="primary"
+              className="bookappoinbtn"
+              onClick={() => jump("bookslots", "/about")}
+            >
+              <b>Book An Appointment</b>
+            </Button>
+
             {showComponent && <BookingSlots />}
           </Col>
           <Col sm={24} md={14}>
@@ -125,7 +127,9 @@ export default function Home() {
           </Col>
         </Row>
 
-        <h3 className="homeaboutus">ABOUT US</h3>
+        <h3 className="homeaboutus" id="about">
+          ABOUT US
+        </h3>
         <Row className="show-grid aboutusayurveda">
           <Col sm={24} md={10} className="nature">
             <p>
@@ -206,7 +210,9 @@ export default function Home() {
             />
           </Col>
         </Row>
-        <h3 className="homeaboutus">SCIENCE OF AYURVEDA</h3>
+        <h3 className="homeaboutus" id="science">
+          SCIENCE OF AYURVEDA
+        </h3>
         <Row>
           <Col md={4}></Col>
           <Col md={16}>
@@ -253,7 +259,9 @@ export default function Home() {
             />
           </Col>
         </Row>
-        <h3 className="homeaboutus">WHY CHOOSE US?</h3>
+        <h3 className="homeaboutus" id="choose">
+          WHY CHOOSE US?
+        </h3>
         <Row>
           <Col md={4}></Col>
           <Col md={16}>
@@ -296,21 +304,30 @@ export default function Home() {
         <Row className="show-grid">
           <Col md={2} xs={0} sm={0} style={{ padding: 0 }}></Col>
           <Col xs={12} sm={12} md={5}>
-            <div className="Gaugefirstdiv">85%</div>
+            <div className="Gaugefirstdiv">
+              <CountDown CountDownnum={80} />%
+            </div>
           </Col>
           <Col xs={12} sm={12} md={5}>
-            <div className="Gaugefirstdiv">70%</div>
-          </Col>
-
-          <Col xs={12} sm={12} md={5}>
-            <div className="Gaugefirstdiv">80%</div>
+            <div className="Gaugefirstdiv">
+              <CountDown CountDownnum={90} />%
+            </div>
           </Col>
           <Col xs={12} sm={12} md={5}>
-            <div className="Gaugefirstdiv">95%</div>
+            <div className="Gaugefirstdiv">
+              <CountDown CountDownnum={75} />%
+            </div>
+          </Col>
+          <Col xs={12} sm={12} md={5}>
+            <div className="Gaugefirstdiv">
+              <CountDown CountDownnum={95} />%
+            </div>
           </Col>
           <Col md={2} xs={0} sm={0} style={{ padding: 0 }}></Col>
         </Row>
-        <h3 className="homeaboutus">MAJOR DIAGNOSTIC TEST</h3>
+        <h3 className="homeaboutus" id="diagnostic">
+          MAJOR DIAGNOSTIC TEST
+        </h3>
         <p>
           The tests required to determine if your kidneys are healthy and
           functioning normally or whether they require therapy are provided.
@@ -436,7 +453,9 @@ export default function Home() {
             </div>
           </Col>
         </Row>
-        <h3 className="homeaboutus">TYPES OF KIDNEY DISEASE</h3>
+        <h3 className="homeaboutus" id="kidney-disease">
+          TYPES OF KIDNEY DISEASE
+        </h3>
         <Row>
           <Col md={4}></Col>
           <Col md={16}>
@@ -549,7 +568,9 @@ export default function Home() {
             </p>
           </Col>
         </Row>
-        <h3 className="homeaboutus">REVIEWS</h3>
+        <h3 className="homeaboutus" id="reviews">
+          REVIEWS
+        </h3>
         <Row>
           <Col md={4}></Col>
           <Col md={16}>

@@ -146,15 +146,17 @@ export default function ChronicKidneyDisease() {
                 entirely genetic, the disorder can occasionally be
                 non-hereditary.
               </p>
-              <p className="bookapoin">
-                <Button
-                  color="green"
-                  appearance="primary"
-                  className="openighourbtn"
-                >
-                  KNOW MORE
-                </Button>
-              </p>
+              <Link to="/kidneydisease/polycystickidneydisease">
+                <p className="bookapoin">
+                  <Button
+                    color="green"
+                    appearance="primary"
+                    className="openighourbtn"
+                  >
+                    KNOW MORE
+                  </Button>
+                </p>
+              </Link>
             </div>
           </Col>
           <Col md={1}></Col>
