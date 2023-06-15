@@ -1,13 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.12c24216.css",
-    "main.js": "/static/js/main.451214d1.js",
+    "main.css": "/static/css/main.c8894340.css",
+    "main.js": "/static/js/main.a834ea24.js",
     "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
-    "static/media/Stage_3.mp4": "/static/media/Stage_3.8625352eca4fb7dc219e.mp4",
-    "static/media/Stage_5.mp4": "/static/media/Stage_5.11b0661a6d2762d9d26b.mp4",
-    "static/media/Stage_2.mp4": "/static/media/Stage_2.fad52e5fe3e1cb73e5c3.mp4",
-    "static/media/Stage_1.mp4": "/static/media/Stage_1.c8248547ac83155c246e.mp4",
-    "static/media/Stage_4.mp4": "/static/media/Stage_4.4abd96805a811514fc47.mp4",
     "static/media/Cretenine.png": "/static/media/Cretenine.ee0c09535fa518f55e78.png",
     "static/media/Chronic_Kidney_Disease.png": "/static/media/Chronic_Kidney_Disease.90f61c3ed4e64694af30.png",
     "static/media/Major_Diagonistics_banner.png": "/static/media/Major_Diagonistics_banner.a6c9836e6feba530600d.png",
@@ -37,12 +32,12 @@
     "static/media/Logo.png": "/static/media/Logo.5b66788296d8e39602a1.png",
     "static/media/Baron_Neue.otf": "/static/media/Baron_Neue.7080d2d10e7fe467b90f.otf",
     "index.html": "/index.html",
-    "main.12c24216.css.map": "/static/css/main.12c24216.css.map",
-    "main.451214d1.js.map": "/static/js/main.451214d1.js.map",
+    "main.c8894340.css.map": "/static/css/main.c8894340.css.map",
+    "main.a834ea24.js.map": "/static/js/main.a834ea24.js.map",
     "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.12c24216.css",
-    "static/js/main.451214d1.js"
+    "static/css/main.c8894340.css",
+    "static/js/main.a834ea24.js"
   ]
 }
